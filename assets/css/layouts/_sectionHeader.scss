@@ -1,0 +1,65 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Add styles here
+.section-header {
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    h2 {
+        font-size: 2em;
+        margin-right: 10px;
+        margin-bottom: 7px;
+    }
+    &__action {
+        margin-bottom: 7px;
+        &--tab {
+            li {
+                font-size: 1em;
+                display: inline-block;
+                cursor: pointer;
+                margin-top: 2px;
+                &.active {
+                    color: $secondaryColor;
+                }
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+            }
+        }
+        a {
+            font-size: 1em;
+            display: inline-flex;
+            align-items: center;
+            i {
+                margin-left: 5px;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+//responsive of section headers
+@include breakpoint-max(991px) {
+    .section-header h2 {
+        font-size: 1.7em;      
+    }
+
+}
+@include breakpoint-max(767px) {
+    .section-header{
+     h2 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+   
+}
+.section-header__action--tab li {
+    font-size: 0.9em;
+}
+
+}

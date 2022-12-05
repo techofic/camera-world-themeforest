@@ -1,0 +1,130 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+input {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: $primaryColor;
+
+    &:focus,
+    &:active {
+        border: 0;
+        outline: 0;
+    }
+}
+
+// Custom input
+.custom-input {
+    &__group {
+        display: flex;
+        // background-color: #ffffff;
+        // border-radius: 8px;
+    }
+
+    &__prepend {
+        padding: 18px 0 18px 18px;
+        // background-color: #ffffff;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    &__append {
+        padding: 18px 18px 18px 0;
+        color: $secondaryColor;
+        // background-color: #ffffff;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    &__field {
+        -ms-flex: 1;
+        flex: 1;
+        width: 100%;
+        padding: 18px 18px;
+        // background-color: #ffffff;
+
+        &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        &::placeholder {
+            color: #B0B0B0;
+        }
+    }
+
+    &__checkbox {
+        input {
+            display: none;
+
+            &:checked {
+                &~label {
+                    &:before {
+                        content: "\f00c";
+                        font-family: 'Line Awesome Free';
+                        font-weight: 900;
+                        color: $secondaryColor;
+                    }
+                }
+            }
+        }
+
+        label {
+            // color: ;
+            // font-size: ;
+            position: relative;
+            padding-left: 24px;
+
+            &:before {
+                content: "";
+                width: 14px;
+                height: 14px;
+                border-radius: 2px;
+                position: absolute;
+                left: 0;
+                top: 4px;
+                border: 1px solid #373737;
+                line-height: 1;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+// Responsive
+@include breakpoint-max(991px) {
+    .custom-input {
+    
+        &__prepend {
+            padding: 15px 0 15px 15px;
+            font-size: 0.9em;
+        }
+    
+        &__append {
+            padding: 15px 15px 15px 0;
+            font-size: 0.9em;
+        }
+    
+        &__field {
+            padding: 15px 15px;
+            font-size: 0.9em;
+        }
+
+        &__checkbox {
+    
+            label {
+                font-size: 0.9em;
+                &:before {
+                    top: 2px;
+                }
+            }
+        }
+    }
+}

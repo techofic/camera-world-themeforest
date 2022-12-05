@@ -1,0 +1,21 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+
+// feature product css
+.featured_img{
+    display: flex;
+    justify-content: space-between;
+}
+.feature_img{
+    left: 0;
+    top:0;
+    height: 150px;
+    border:1px solid $borderColor;
+    
+}
+.featured_img figure img{
+    height: 120px;
+    display: inline-block!important;
+    width: auto!important;
+    box-shadow: 0px 0px 58px rgba(204, 203, 203, 0.25);
+}

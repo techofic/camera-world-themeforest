@@ -1,0 +1,107 @@
+@use './variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Add styles here
+.bg-gray {
+    background-color: #F5F5F5;
+}
+
+.bg-primary {
+    background-color: $primaryColor !important;
+}
+
+.t-clr-primary {
+    color: $primaryColor !important;
+}
+
+.t-clr-secondary {
+    color: $secondaryColor !important;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pt-50 {
+    padding-top: 50px;
+}
+
+.pt-70 {
+    padding-top: 70px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.pb-70 {
+    padding-bottom: 70px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.rotate-y-160 {
+    transform: rotateY(160deg);
+}
+
+.rotate-y-45 {
+    transform: rotate(-45deg);
+}
+
+// For max-width: 767px
+@include breakpoint-max(767px) {
+    body {
+        font-size: 0.9375em;
+    }
+
+    .pt-100 {
+        padding-top: 50px;
+    }
+
+    .pb-100 {
+        padding-bottom: 50px;
+    }
+
+    .pb-70 {
+        padding-bottom: 20px;
+    }
+
+    .ptb-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .section-header {
+        h2 {
+            font-size: 2em;
+        }
+    }
+
+}
+
+.pbl {
+    padding-right: 80px;
+}

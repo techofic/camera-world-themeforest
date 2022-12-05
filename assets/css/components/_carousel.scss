@@ -1,0 +1,219 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Carousel CSS
+/*************** hero_section ***************/
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $secondaryColor;
+}
+// .owl-theme .owl-dots {
+//     position: absolute;
+//     bottom:6px;
+// }
+// @include breakpoint-max(991px) {
+//     // .owl-theme .owl-dots {
+//     //     left: 43%;
+//     // }
+//     }
+// @include breakpoint-min(992px) {
+// // .owl-theme .owl-dots {
+// //     left: 45%;
+// // }
+// }
+
+// @include breakpoint-max(767px) {
+//     // .owl-theme .owl-dots {
+//     //     left: 39%;
+//     // }
+// }
+// @include breakpoint-max(467px) {
+//     // .owl-theme .owl-dots {
+//     //     left: 35%;
+//     // }
+// }
+
+.owl {
+    &-carousel {
+        .owl-item {
+            img {
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    &-theme {
+        .owl-nav {
+            margin: 0;
+            [class*=owl-] {
+
+                margin: 0;
+                width: 50px;
+                height: 50px;
+                color: $secondaryColor !important;
+                background-color: #ffffff !important;
+                border-radius: 50%;
+                box-shadow: 0px 0px 55px rgba(228, 228, 228, 0.55);
+                .la-angle-right:before {
+                    content: "\f105";
+                    font-size: 16px;
+                }
+                .la-angle-left:before {
+                    content: "\f104";
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+// .owl-theme .owl-nav.disabled+.owl-dots {
+//     margin-top: 0;
+// }
+
+// Responsive
+@include breakpoint-max(1199px) {
+    .owl {
+        &-theme {
+            .owl-nav {
+                [class*=owl-] {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-max(991px) {
+    .owl {
+        &-theme {
+            .owl-nav {
+                margin-top: 30px;
+                [class*=owl-] {
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+            
+        }
+    }
+}
+
+@include breakpoint-min(992px) {
+    .owl {
+        &-theme {
+            .owl-nav {
+                [class*=owl-] {
+                    position: absolute;
+                    top: 30%;
+                }
+                .owl {
+                    &-prev {
+                        left: -3vw!important;
+                    }
+                    &-next {
+                        right: -3vw!important;
+                    }
+                }
+            }
+        }
+    }
+}
+@include breakpoint-min(992px) {
+    .owl {
+        &-theme {
+            .owl-nav {
+                .owl {
+                    &-prev {
+                        left: -2.5vw!important;
+                    }
+                    &-next {
+                        right: -2.5vw!important;
+                    }
+                }
+            }
+        }
+    }
+}
+@include breakpoint-min(1100px) {
+    .owl {
+        &-theme {
+            .owl-nav {
+                .owl {
+                    &-prev {
+                        left: -2vw!important;
+                    }
+                    &-next {
+                        right: -2vw!important;
+                    }
+                }
+            }
+        }
+    }
+}
+@include breakpoint-min(1430px) {
+    .owl {
+        &-theme {
+            .owl-nav {
+                .owl {
+                    &-prev {
+                        left: -4vw!important;
+                    }
+                    &-next {
+                        right: -4vw!important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//new-product
+// .new-product__section{
+//     @include breakpoint-min(1100px) {
+//         .owl {
+//             &-theme {
+//                 .owl-nav {
+//                     .owl {
+//                         &-prev {
+//                             left: -23px;
+//                             top: 121px;
+//                         }
+//                         &-next {
+//                             right: -23px;
+//                             top: 121px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+    
+
+// }
+//new-product
+// .featured-product__section{
+//     @include breakpoint-min(1100px) {
+//         .owl {
+//             &-theme {
+//                 .owl-nav {
+//                     .owl {
+//                         &-prev {
+//                             left: -23px;
+//                             top: 121px;
+//                         }
+//                         &-next {
+//                             right: -23px;
+//                             top: 121px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+    
+
+// }
+

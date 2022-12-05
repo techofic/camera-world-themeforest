@@ -1,0 +1,21 @@
+@use '../abstracts/mixins' as *;
+
+
+:root {
+    --nav-height: 85px;
+    @include breakpoint-max(767px){
+        --nav-height: 70px;
+
+    }
+}
+
+$primaryColor: #010101;
+$secondaryColor: #FF0000;
+$grayColor: #3A3A3A;
+$borderColor: #E3E3E3;
+$bgWhite: #ffffff;
+$titleRed: #BC5D5D;
+$inverseColor: #ffffff;
+$labelColor1: #3D3B3B;
+$footerlist:#6A6A6A;
+$gray: #3d3b3b;

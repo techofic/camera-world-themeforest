@@ -1,0 +1,32 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/*****************************
+    Add All Typography Here
+*****************************/
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Inter';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+// Media query
+@include breakpoint-max(991px) {
+    body {
+        font-size: 0.9375em;
+    }
+}
+
+p {
+    font-size: 1em;
+}

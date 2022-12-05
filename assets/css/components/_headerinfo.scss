@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+@media only screen and (min-width: 991px){
+.header-info {
+    background-color: #F5F5F5;
+}
+
+.header-info-content {
+    display: flex;
+}
+
+.header-info-content-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 13px;
+    width: 33.33%;
+    text-align: center;
+    justify-content: space-between;
+    line-height: 1.3;
+    font-weight: 500;
+    
+}
+
+.header-info-content-item:not(:last-child) {
+    border-right: 1px solid white;
+}
+
+}
+
+.offcanvas-header-info-content-item{
+    font-weight: 500;
+    font-size: 1em;
+
+}
+.offcanvas-header-info-content-item:not(:last-child){
+    margin-bottom: 15px;
+}
+@include breakpoint-max(990px){
+    .offcanvas-header-info-content-item{
+    border-bottom: 1px solid  rgb(212, 210, 210);
+    padding-bottom: 10px;
+}
+}
