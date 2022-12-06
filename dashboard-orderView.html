@@ -186,7 +186,7 @@
                         </a>
                     </li>
                     <li class="dashboard-menu--list---item">
-                        <a class="menu-link" href="dashboard-order.html"><i class="las la-shopping-bag"></i>
+                        <a class="menu-link active" href="dashboard-order.html"><i class="las la-shopping-bag"></i>
                             <h4>My Orders</h4>
                         </a>
                     </li>
@@ -201,7 +201,7 @@
                         </a>
                     </li>
                     <li class="dashboard-menu--list---item">
-                        <a class="menu-link active" href="#"><i class="las la-map-marker"></i>
+                        <a class="menu-link" href="dashboard-address.html"><i class="las la-map-marker"></i>
                             <h4>Address</h4>
                         </a>
                     </li>
@@ -223,18 +223,82 @@
                 </ul>
             </div>
 
-            <!-- Dashboard Address -->
+            <!-- Dashboard My Order-->
 
-            <div class="dashboard-address menu-item">
-                <h4 class="menu-item--title">Billing Address</h4>
-                <h4 class="sub-title">Nazmul Chowdhury</h4>
-                <p class="address">
-                    From your account dashboard. you can easily check & view your recent
-                    orders, manage your shipping and billing addresses and edit your
-                    password and account details
-                </p>
-                <p class="contact">Mobile: 012-345-6789</p>
-                <button><i class="las la-edit"></i>Edit Address</button>
+            <div class="dashboard-order--details menu-item">
+                <h4 class="menu-item--title">Order Details</h4>
+                <div class="dashboard-order--details---area">
+                    <div class="product-detail">
+                        <h4 class="title">PX 890</h4>
+                        <h4 class="sub-title">order details: 2021-08-27 17:20:08</h4>
+                    </div>
+                    <div class="customer-detail">
+                        <h4 class="sub-title">Billing Information:</h4>
+                        <h4 class="title">Nazmul Chowdhury</h4>
+                        <h4 class="title">Sylhet Shadar, Sylhet</h4>
+                        <h4 class="title">123-456-789</h4>
+                    </div>
+                    <div class="payment-method">
+                        <h4 class="sub-title">Payment Method:</h4>
+                        <h4 class="title">Bkash</h4>
+                    </div>
+                    <div class="payment-status">
+                        <h4 class="sub-title">Payment Status</h4>
+                        <h4 class="title">Pending</h4>
+                    </div>
+                </div>
+
+                <div class="dashboard-order--details---table pt-50">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">QTY</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="product-details">
+                                <td scope="row">Sony ZV-1 digital camera</td>
+                                <td>25</td>
+                                <td>1</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td scope="row" class="total-title">Sub Total</td>
+                                <td></td>
+                                <td></td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Membership Discount 10%</td>
+                                <td></td>
+                                <td></td>
+                                <td>-3</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Rounding(+/-)</td>
+                                <td></td>
+                                <td></td>
+                                <td>-2</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Deliver Charge</td>
+                                <td></td>
+                                <td></td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td scope="row" class="total-title">Grand Total</td>
+                                <td></td>
+                                <td></td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button>Track Order</button>
+                </div>
             </div>
         </div>
 

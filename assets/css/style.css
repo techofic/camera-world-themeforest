@@ -4097,9 +4097,18 @@ p {
 }
 .dashboard-account .account-details--select {
   display: flex;
-  white-space: nowrap;
 }
 .dashboard-account .account-details--select---item {
+  width: 100%;
+}
+.dashboard-account .account-details--select---item .input-field {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-account .account-details--select---item .input-field select {
+  border: 1px solid #e3e3e3;
+  padding: 5px 5px;
+  border-radius: 5px;
   width: 100%;
 }
 .dashboard-account .account-details--select---item:not(:last-child) {

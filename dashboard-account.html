@@ -181,47 +181,42 @@
                     <h4 class="header">Nazmul Chowdhury</h4>
                     <ul class="dashboard-menu--list">
                         <li class="dashboard-menu--list---item">
-                            <a class="menu-link" aria-current="page" to="/dashboard-profile"><i
-                                    class="las la-icons"></i>
+                            <a class="menu-link" href="dashboard-profile.html"><i class="las la-icons"></i>
                                 <h4>Dashboard</h4>
                             </a>
                         </li>
                         <li class="dashboard-menu--list---item">
-                            <a class="menu-link active" aria-current="page" to="/"><i class="las la-shopping-bag"></i>
+                            <a class="menu-link" href="dashboard-order.html"><i class="las la-shopping-bag"></i>
                                 <h4>My Orders</h4>
                             </a>
                         </li>
                         <li class="dashboard-menu--list---item">
-                            <a class="menu-link" aria-current="page" to="/dashboard-preOrder"><i class="las la-box"></i>
+                            <a class="menu-link" href="dashboard-preOrder.html"><i class="las la-box"></i>
                                 <h4>My Pre-Orders</h4>
                             </a>
                         </li>
                         <li class="dashboard-menu--list---item">
-                            <a class="menu-link" aria-current="page" to="/dashboard-notification"><i
-                                    class="las la-bell"></i>
+                            <a class="menu-link" href="dashboard-notification.html"><i class="las la-bell"></i>
                                 <h4>Notification</h4>
                             </a>
                         </li>
                         <li class="dashboard-menu--list---item">
-                            <a class="menu-link" aria-current="page" to="/dashboard-address"><i
-                                    class="las la-map-marker"></i>
+                            <a class="menu-link" href="dashboard-address.html"><i class="las la-map-marker"></i>
                                 <h4>Address</h4>
                             </a>
                         </li>
                         <li class="dashboard-menu--list---item">
-                            <a class="menu-link" aria-current="page" to="/dashboard-account"><i class="las la-user"></i>
+                            <a class="menu-link active" href="#"><i class="las la-user"></i>
                                 <h4>Account Details</h4>
                             </a>
                         </li>
                         <li class="dashboard-menu--list---item">
-                            <a class="menu-link" aria-current="page" to="/dashboard-report"><i
-                                    class="las la-clipboard-list"></i>
+                            <a class="menu-link" href="dashboard-report.html"><i class="las la-clipboard-list"></i>
                                 <h4>Report Issue</h4>
                             </a>
                         </li>
                         <li class="dashboard-menu--list---item">
-                            <a class="menu-link" aria-current="page" to="/dashboard-signOut"><i
-                                    class="las la-sign-out-alt"></i>
+                            <a class="menu-link" href="#"><i class="las la-sign-out-alt"></i>
                                 <h4>Sign Out</h4>
                             </a>
                         </li>
@@ -264,37 +259,31 @@
                                 <div class="account-details--select---item">
                                     <div class="input-field">
                                         <label>Select Your City*</label>
-                                        <div>
-                                            <Select class="only" placeholder="Choose a City">
-                                                <option value="volvo">Sylhet</option>
-                                                <option value="saab">Dhaka</option>
-                                                <option value="mercedes">Rangpur</option>
-                                            </Select>
-                                        </div>
+                                        <Select class="only" placeholder="Choose a City">
+                                            <option value="Sylhet">Sylhet</option>
+                                            <option value="Dhaka">Dhaka</option>
+                                            <option value="Rangpur">Rangpur</option>
+                                        </Select>
                                     </div>
                                 </div>
                                 <div class="account-details--select---item">
                                     <div class="input-field">
                                         <label>Select Your Zone*</label>
-                                        <div>
-                                            <Select class="only" placeholder="Choose a City">
-                                                <option value="volvo">Sylhet</option>
-                                                <option value="saab">Dhaka</option>
-                                                <option value="mercedes">Rangpur</option>
-                                            </Select>
-                                        </div>
+                                        <Select class="only" placeholder="Choose a City">
+                                            <option value="Sylhet">Sylhet</option>
+                                            <option value="Dhaka">Dhaka</option>
+                                            <option value="Rangpur">Rangpur</option>
+                                        </Select>
                                     </div>
                                 </div>
                                 <div class="account-details--select---item">
                                     <div class="input-field">
                                         <label>Select Your Area*</label>
-                                        <div>
-                                            <Select class="only" placeholder="Choose a City">
-                                                <option value="volvo">Sylhet</option>
-                                                <option value="saab">Dhaka</option>
-                                                <option value="mercedes">Rangpur</option>
-                                            </Select>
-                                        </div>
+                                        <Select class="only" placeholder="Choose a City">
+                                            <option value="Sylhet">Sylhet</option>
+                                            <option value="Dhaka">Dhaka</option>
+                                            <option value="Rangpur">Rangpur</option>
+                                        </Select>
                                     </div>
                                 </div>
                             </div>
@@ -315,46 +304,41 @@
                             <div class="input-field">
                                 <label>Facebook Profile*</label>
                                 <div class="custom-input__group">
-                                    <input class="custom-input__field" type="text" placeholder="Facebook Profile"
-                                        v-model="formValue.customer.facebook" />
+                                    <input class="custom-input__field" type="text" placeholder="Facebook Profile"/>
                                 </div>
                             </div>
                             <div class="input-field">
                                 <label>Instagram profile*</label>
                                 <div class="custom-input__group">
-                                    <input class="custom-input__field" type="text" placeholder="Instagram profile"
-                                        v-model="formValue.customer.instagram" />
+                                    <input class="custom-input__field" type="text" placeholder="Instagram profile" />
                                 </div>
                             </div>
                             <div class="custom-input__checkbox">
-                                <input type="checkbox" id="payment1" v-model="isPasswordChange" />
+                                <input type="checkbox" id="payment1"/>
                                 <label for="payment1"> Password Change?</label>
                             </div>
                             <template v-if="isPasswordChange">
                                 <div class="input-field">
                                     <label>Current password</label>
                                     <div class="custom-input__group">
-                                        <input class="custom-input__field" type="password"
-                                            placeholder="Current password" v-model="password.oldPassword" />
+                                        <input class="custom-input__field" type="password" placeholder="Current password"/>
                                     </div>
                                 </div>
                                 <div class="input-field">
                                     <label>New password</label>
                                     <div class="custom-input__group">
-                                        <input class="custom-input__field" type="password" placeholder="New password"
-                                            v-model="password.password" />
+                                        <input class="custom-input__field" type="password" placeholder="New password"/>
                                     </div>
                                 </div>
                                 <div class="input-field">
                                     <label>Confirm password</label>
                                     <div class="custom-input__group">
-                                        <input class="custom-input__field" type="password"
-                                            placeholder="Confirm password" v-model="password.cpassword" />
+                                        <input class="custom-input__field" type="password" placeholder="Confirm password" />
                                     </div>
                                 </div>
                             </template>
                         </form>
-                        <button @click="formSubmit">SAVE CHANGES</button>
+                        <button >SAVE CHANGES</button>
                     </div>
                 </div>
             </div>

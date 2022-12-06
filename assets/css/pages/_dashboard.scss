@@ -446,14 +446,23 @@
 
     &--select {
       display: flex;
-      white-space: nowrap;
-
       &---item {
         width: 100%;
+        .input-field {
+          display: flex;
+          flex-direction: column;
+          select {
+            border: 1px solid #e3e3e3;
+            padding: 5px 5px;
+            border-radius: 5px;
+            width: 100%;
+          }
+        }
 
         &:not(:last-child) {
           margin-right: 20px;
         }
+
       }
     }
 
