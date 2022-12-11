@@ -34,12 +34,12 @@
                 padding: 10px;
                 font-size: 1em;
                 font-weight: 600;
-                color: $grayColor;
+                color: #676767;
                 span{
                     display: inline-block;
                     color: $primaryColor;
                     font-weight: 900;
-                    font-size: 1.3em;
+                    font-size: 1.75em;
                 }
             }
         }
@@ -72,6 +72,23 @@
             }
             &__link {
                 font-size: 1em;
+            }
+        }
+    }
+}
+@include breakpoint-max(767px){
+    .time {
+        &-card {
+            h4 {
+                font-size: 1.9em;
+            }
+            &__counter {
+                li {
+                    font-size: 0.9em;
+                    span {
+                        font-size: 1.4375em;
+                    }
+                }
             }
         }
     }

@@ -64,36 +64,58 @@
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#">
                                         Shop
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
-                                        <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                                        <li><a class="dropdown-item" href="shop.html">Shop Grid</a></li>
+                                        <li><a class="dropdown-item" href="#">Shop List</a></li>
+                                        <li><a class="dropdown-item" href="product.html">Single Shop</a></li>
+                                        <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#">
-                                        Sale
+                                        Pages
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
-                                        <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                                        <li><a class="dropdown-item" href="signIn.html">Sign In</a></li>
+                                        <li><a class="dropdown-item" href="signUp.html">Sign Up</a></li>
+                                        <li><a class="dropdown-item" href="#">Forget Password</a></li>
+                                        <li><a class="dropdown-item" href="#">Account</a>
+                                            <ul class="dropdown-menu nested-dropdown">
+                                                <li><a class="dropdown-item" href="dashboard-profile.html">Dashboard</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-order.html">My Orders</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-preOrder.html">My Pre-order</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-notification.html">Notifications</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-address.html">Address</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-account.html">Account Details</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-report.html">Report Issue</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Others</a>
+                                            <ul class="dropdown-menu nested-dropdown">
+                                                <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+                                                <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                                                <li><a class="dropdown-item" href="#">Coming Soon</a></li>
+                                                <li><a class="dropdown-item" href="#">Search Page</a></li>
+                                                <li><a class="dropdown-item" href="#">404 Error Page</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About Us</a>
+                                    <a class="nav-link" href="about.html">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Wish List</a>
+                                    <a class="nav-link" href="wishlist.html">Wish List</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact Us</a>
+                                    <a class="nav-link active" href="#">Contact Us</a>
                                 </li>
                             </ul>
                             <div class="offcanvas-header__info d-lg-none bg-gray">
@@ -107,27 +129,34 @@
                     <!-- Navbar Action Starts -->
                     <div class="navbar-content__item">
                         <ul class="navbar-content__item--action">
-
-
                             <li class="rotate-y-160" data-bs-toggle="offcanvas" data-bs-target="#navbarSearchArea"
-                                aria-controls="navbarSearchArea"> <i class="las la-search"></i></li>
-
-                            <li><a href="#"><i class="las la-user"></i></a></li>
-                            <!-- <li>
+                                aria-controls="navbarSearchArea">
+                                <i class="las la-search"></i>
+                            </li>
+                            <li><a href="signIn.html"><i class="las la-user"></i></a></li>
+                            <li data-bs-toggle="offcanvas" data-bs-target="#navbarCartArea"
+                                aria-controls="navbarCartArea">
                                 <i class="las la-shopping-cart"></i>
                                 <span class="navbar-action__badge">2</span>
-                            </li>-->
-                            <li data-bs-toggle="offcanvas" data-bs-target="#navbarCartArea"
-                                aria-controls="navbarCartArea"> <i class="las la-shopping-cart"></i> <span
-                                    class="navbar-action__badge">2</span></li>
-
-
+                            </li>
                             <li class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                                aria-controls="offcanvasNavbar"><i class="las la-bars"></i></li>
+                                aria-controls="offcanvasNavbar">
+                                <i class="las la-bars"></i>
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Navbar Action Ends -->
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-info bg-gray">
+            <div class="container">
+                <div class="hero-info__content">
+                    <div class="hero-info__content--item d-none d-lg-block">Refer a Friend. Get 20% Off</div>
+                    <div class="hero-info__content--item d-none d-lg-block">Subscribe Today Get $10 Off</div>
+                    <div class="hero-info__content--item d-none d-lg-block">Free Shipping +30 Day Returns</div>
                 </div>
             </div>
         </div>

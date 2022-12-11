@@ -117,10 +117,12 @@
                     margin-bottom: 50px;
                     border-radius: 8px;
                     font-size: 16px;
+
                     input {
                         padding: 15px 0;
                     }
                 }
+
                 &__prepend {
                     padding: 15px;
                     font-size: 18px;
@@ -128,6 +130,7 @@
                 }
             }
         }
+
         &--display {
             display: flex;
             justify-content: space-between;
@@ -142,49 +145,153 @@
             &---body {
                 display: flex;
                 flex-wrap: wrap;
+
                 .item {
-                    font-size: 16px;
+                    font-size: 18px;
                     color: #3e3e3e;
                     cursor: pointer;
                     margin-bottom: 5px;
-                    &:not(:last-child){
+
+                    &:not(:last-child) {
                         margin-right: 50px;
                     }
+
                     span {
                         margin-right: 6px;
                     }
+
+                    a {
+                        color: $primaryColor;
+                        transition: color 0.3s linear;
+
+                        &.active {
+                            color: $secondaryColor;
+                        }
+
+                        &.dropdown-toggle {
+                            &:after {
+                                content: "\f107";
+                                font-family: "Line Awesome Free";
+                                font-weight: 900;
+                                border: 0;
+                                vertical-align: 1px;
+                                line-height: 1;
+                                font-size: 0.9em;
+                                margin-left: 1px;
+                            }
+                        }
+                    }
+
+                    &.dropdown {
+                        position: relative;
+                        display: inline-block;
+
+                        &:hover {
+                            .dropdown-menu {
+                                display: block;
+                                box-shadow: 0 4px 11px 2px rgb(0 0 0 / 7%);
+                                max-width: 250px;
+                                width: 100%;
+                                border: 0;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        .dropdown-menu {
+                            display: none;
+                            position: absolute;
+                            border: 0;
+                            border-radius: 5px;
+
+                            li {
+                                a {
+
+                                    &:hover,
+                                    &:focus,
+                                    &:active {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            // &--icon {
-            //     i {
-            //         font-weight: bolder;
-            //         font-size: 18px;
-            //         color: black;
-            //         padding-left: 10px;
-
-            //         &.active {
-            //             color: $secondaryColor;
-            //         }
-
-            //         &:hover {
-            //             color: $secondaryColor;
-            //         }
-            //     }
-            // }
 
             &--default {
                 display: flex;
-                margin-left: 20px;  
-                margin-bottom: 5px;
+                margin-left: 20px;
 
-                p {
-                    padding-right: 10px;
-                    white-space: nowrap;
-                }    
-                i {
-                    top: 50%;
-                    transform: translateY(4px);
-                }          
+                .item {
+                    font-size: 18px;
+                    color: #3e3e3e;
+                    cursor: pointer;
+                    margin-bottom: 5px;
+
+                    &:not(:last-child) {
+                        margin-right: 50px;
+                    }
+
+                    span {
+                        margin-right: 6px;
+                    }
+
+                    a {
+                        color: $primaryColor;
+                        transition: color 0.3s linear;
+
+                        &.active {
+                            color: $secondaryColor;
+                        }
+
+                        &.dropdown-toggle {
+                            &:after {
+                                content: "\f107";
+                                font-family: "Line Awesome Free";
+                                font-weight: 900;
+                                border: 0;
+                                vertical-align: 1px;
+                                line-height: 1;
+                                font-size: 0.9em;
+                                margin-left: 1px;
+                            }
+                        }
+                    }
+
+                    &.dropdown {
+                        position: relative;
+                        display: inline-block;
+
+                        &:hover {
+                            .dropdown-menu {
+                                display: block;
+                                box-shadow: 0 4px 11px 2px rgb(0 0 0 / 7%);
+                                max-width: 250px;
+                                width: 100%;
+                                border: 0;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        .dropdown-menu {
+                            display: none;
+                            position: absolute;
+                            border: 0;
+                            border-radius: 5px;
+
+                            li {
+                                a {
+
+                                    &:hover,
+                                    &:focus,
+                                    &:active {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -335,6 +442,9 @@
 
 @include breakpoint-max(991px) {
     .shop {
+        &-section {
+            padding-top: 20px;
+        }
         &-head {
             font-size: 18px;
             margin-bottom: 15px;
@@ -406,6 +516,7 @@
         &-product {
             flex: 0 0 100%;
             padding-left: calc(var(--bs-gutter-x) * .5);
+
             &--search {
                 .custom-input {
                     &__group {
@@ -414,6 +525,7 @@
                     }
                 }
             }
+
             &--display {
                 margin-bottom: 30px;
                 margin-left: 0;
@@ -422,13 +534,19 @@
                 &---body {
                     .item {
                         font-size: 14px;
-                        &:not(:last-child){
+
+                        &:not(:last-child) {
                             margin-right: 30px;
                         }
                     }
                 }
+
                 &--default {
                     font-size: 14px;
+
+                    .item {
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -440,6 +558,9 @@
 
                 .grid-item {
                     width: 33%;
+                    .product-card {
+                        margin-bottom: 30px;
+                    }
                     a {
                         .product-card {
                             &__info {
@@ -466,20 +587,24 @@
     .shop {
         &-product {
             padding: 0 10px;
+
             &--item {
                 .grid-item {
                     width: 50%;
                 }
             }
+
             &--search {
                 .custom-input {
                     &__group {
                         width: 100%;
                         font-size: 14px;
+
                         input {
                             padding: 12px 0;
                         }
                     }
+
                     &__prepend {
                         padding: 12px;
                         font-size: 16px;

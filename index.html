@@ -71,29 +71,51 @@
                                         Shop
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
-                                        <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                                        <li><a class="dropdown-item" href="shop.html">Shop Grid</a></li>
+                                        <li><a class="dropdown-item" href="#">Shop List</a></li>
+                                        <li><a class="dropdown-item" href="product.html">Single Shop</a></li>
+                                        <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                                        <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#">
-                                        Sale
+                                        Pages
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
-                                        <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                                        <li><a class="dropdown-item" href="signIn.html">Sign In</a></li>
+                                        <li><a class="dropdown-item" href="signUp.html">Sign Up</a></li>
+                                        <li><a class="dropdown-item" href="#">Forget Password</a></li>
+                                        <li><a class="dropdown-item" href="#">Account</a>
+                                            <ul class="dropdown-menu nested-dropdown">
+                                                <li><a class="dropdown-item" href="dashboard-profile.html">Dashboard</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-order.html">My Orders</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-preOrder.html">My Pre-order</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-notification.html">Notifications</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-address.html">Address</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-account.html">Account Details</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-report.html">Report Issue</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Others</a>
+                                            <ul class="dropdown-menu nested-dropdown">
+                                                <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+                                                <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                                                <li><a class="dropdown-item" href="#">Coming Soon</a></li>
+                                                <li><a class="dropdown-item" href="#">Search Page</a></li>
+                                                <li><a class="dropdown-item" href="#">404 Error Page</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About Us</a>
+                                    <a class="nav-link" href="about.html">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Wish List</a>
+                                    <a class="nav-link" href="wishlist.html">Wish List</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact Us</a>
+                                    <a class="nav-link" href="feedback.html">Contact Us</a>
                                 </li>
                             </ul>
                             <div class="offcanvas-header__info d-lg-none bg-gray">
@@ -107,23 +129,20 @@
                     <!-- Navbar Action Starts -->
                     <div class="navbar-content__item">
                         <ul class="navbar-content__item--action">
-
-
                             <li class="rotate-y-160" data-bs-toggle="offcanvas" data-bs-target="#navbarSearchArea"
-                                aria-controls="navbarSearchArea"> <i class="las la-search"></i></li>
-
-                            <li><a href="#"><i class="las la-user"></i></a></li>
-                            <!-- <li>
+                                aria-controls="navbarSearchArea">
+                                <i class="las la-search"></i>
+                            </li>
+                            <li><a href="signIn.html"><i class="las la-user"></i></a></li>
+                            <li data-bs-toggle="offcanvas" data-bs-target="#navbarCartArea"
+                                aria-controls="navbarCartArea">
                                 <i class="las la-shopping-cart"></i>
                                 <span class="navbar-action__badge">2</span>
-                            </li>-->
-                            <li data-bs-toggle="offcanvas" data-bs-target="#navbarCartArea"
-                                aria-controls="navbarCartArea"> <i class="las la-shopping-cart"></i> <span
-                                    class="navbar-action__badge">2</span></li>
-
-
+                            </li>
                             <li class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                                aria-controls="offcanvasNavbar"><i class="las la-bars"></i></li>
+                                aria-controls="offcanvasNavbar">
+                                <i class="las la-bars"></i>
+                            </li>
                         </ul>
                     </div>
 
@@ -194,7 +213,7 @@
                 </div>
             </div>
             <div class="item hero-section__bg"
-                style="background-image:url(assets/img/dslr.png) ; background-size: cover">
+                style="background-image:url(assets/img/Frame.png) ; background-size: cover">
                 <div class="container">
                     <div class="hero-section__content">
                         <h4>Another World of Camera, Lens and Accessories.</h4>
@@ -204,7 +223,7 @@
                 </div>
             </div>
             <div class="item hero-section__bg"
-                style="background-image:url(assets/img/dslr.png) ;background-size: cover">
+                style="background-image:url(assets/img/Frame.png) ;background-size: cover">
                 <div class="container">
                     <div class="hero-section__content">
                         <h4>Another World of Camera, Lens and Accessories.</h4>
@@ -414,8 +433,13 @@
 
     <!--****************Picture Section******************-->
 
-
     <section class="product-info__section">
+        <figure>
+            <img src="assets/img/discover-section.png">
+        </figure>
+
+    </section>
+    <!-- <section class="product-info__section">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 product-info__item">
@@ -453,7 +477,7 @@
         <div class="product-info__section--camera">
           <img src="assets/img/skew-camera.png" alt="Camera" />
         </div>
-    </section>
+    </section> -->
 
     <!--***************New Product Section****************-->
 
@@ -741,7 +765,7 @@
 
     <!--***************Recent Article Section****************-->
 
-    <section class="article__section pt-100 pb-100">
+    <section class="article__section pt-100 pb-70">
         <div class="container">
             <div class="section-header">
                 <h2>Recent Articles</h2>
@@ -754,8 +778,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 article-section pb-30">
                         <img class="article-section__img" src="assets/img/article1.png" alt="">
                         <p class="article-section__date">MAY 20, 2020</p>
-                        <h4 class="article-section__head">Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.</h4>
+                        <h4 class="article-section__head">The Importance Importance of Cameras..........</h4>
                         <p class="article-section__para">Sed ut perspiciatis unde omnis iste natus error sit volupta
                             accusantium doloremque laudantium, totam rem aperia,
                             eaque natus error sit voluptatem
@@ -765,8 +788,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 article-section pb-30">
                         <img class="article-section__img" src="assets/img/article2.png" alt="">
                         <p class="article-section__date">MAY 20, 2020</p>
-                        <h4 class="article-section__head">Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.</h4>
+                        <h4 class="article-section__head">The Importance Importance of Cameras..........</h4>
                         <p class="article-section__para">Sed ut perspiciatis unde omnis iste natus error sit volupta
                             accusantium doloremque laudantium, totam rem aperia,
                             eaque natus error sit voluptatem
@@ -776,8 +798,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 article-section pb-30">
                         <img class="article-section__img" src="assets/img/article3.png" alt="">
                         <p class="article-section__date">MAY 20, 2020</p>
-                        <h4 class="article-section__head">Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.</h4>
+                        <h4 class="article-section__head">The Importance Importance of Cameras..........</h4>
                         <p class="article-section__para">Sed ut perspiciatis unde omnis iste natus error sit volupta
                             accusantium doloremque laudantium, totam rem aperia,
                             eaque natus error sit voluptatem

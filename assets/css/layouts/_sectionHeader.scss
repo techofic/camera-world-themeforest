@@ -24,6 +24,7 @@
                 display: inline-block;
                 cursor: pointer;
                 margin-top: 2px;
+                color: gray;
                 &.active {
                     color: $secondaryColor;
                 }
@@ -52,6 +53,8 @@
 }
 @include breakpoint-max(767px) {
     .section-header{
+        margin-bottom: 1.375em;
+        padding: 0;
      h2 {
         font-size: 1.4em;
         margin-bottom: 10px;

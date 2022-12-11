@@ -7,31 +7,6 @@
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: $secondaryColor;
 }
-// .owl-theme .owl-dots {
-//     position: absolute;
-//     bottom:6px;
-// }
-// @include breakpoint-max(991px) {
-//     // .owl-theme .owl-dots {
-//     //     left: 43%;
-//     // }
-//     }
-// @include breakpoint-min(992px) {
-// // .owl-theme .owl-dots {
-// //     left: 45%;
-// // }
-// }
-
-// @include breakpoint-max(767px) {
-//     // .owl-theme .owl-dots {
-//     //     left: 39%;
-//     // }
-// }
-// @include breakpoint-max(467px) {
-//     // .owl-theme .owl-dots {
-//     //     left: 35%;
-//     // }
-// }
 
 .owl {
     &-carousel {

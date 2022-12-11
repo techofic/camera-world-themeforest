@@ -23,8 +23,11 @@ button {
         border: 1px solid $secondaryColor;
         background-color: transparent;
         color: $secondaryColor;
-        //padding-top: 8px;
-        //padding-bottom: 8px;
+    }
+    &:hover {
+        background-color: $secondaryColor;
+        color: #ffffff;
+        transition: 0.3s linear;
     }
 }
 

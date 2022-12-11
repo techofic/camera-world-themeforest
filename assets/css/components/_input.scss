@@ -14,6 +14,15 @@ input {
         outline: 0;
     }
 }
+select {
+
+    &:focus-visible, &:active {
+    
+    border: 0;
+    outline: 0;
+    }
+    
+    }
 
 // Custom input
 .custom-input {

@@ -34,7 +34,7 @@
                 li {
                     display: inline-block;
                     font-size: 1.4em;
-                    line-height: 1;
+                    // line-height: 1;
                     cursor: pointer;
                     color: $primaryColor;
                     transition: color 0.3s linear;
@@ -324,6 +324,7 @@
         .offcanvas {
             &-header {
                 padding: 15px 20px;
+                position: relative;
 
                 &__brand {
                     width: 200px;
@@ -333,6 +334,9 @@
                     font-size: 1.6em;
                     color: $primaryColor;
                     line-height: 1;
+                    position: absolute;
+                    right: 15px;
+                    top: 25px;
                 }
             }
 
@@ -382,7 +386,7 @@
                             }
                         }
                         &:not(:last-child) {
-                            margin-bottom: 6px;
+                            margin-bottom: 10px;
                         }
                     }
                 }
