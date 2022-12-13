@@ -1374,11 +1374,22 @@ p {
   border-bottom: 1px solid;
 }
 
+.new-product__area {
+  margin-left: -50px;
+  margin-right: -50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow: hidden;
+}
+
 .tabcontent {
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 .tabcontent.active {
   display: block;
+  opacity: 1;
 }
 
 .featuredtabcontent {

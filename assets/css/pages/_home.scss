@@ -240,10 +240,20 @@
 }
 
 // Style the tab content
+.new-product__area {
+  margin-left: -50px;
+  margin-right: -50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow: hidden;
+}
 .tabcontent {
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s linear;
   &.active {
     display: block;
+    opacity: 1;
   }
 }
 .featuredtabcontent {

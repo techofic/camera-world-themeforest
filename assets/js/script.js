@@ -184,13 +184,13 @@ $('.new-product__carousel').owlCarousel({
 })
 
 // Selection tab
-$(".new-product__section .section-header__action--tab li").on("click", function () {
-    $(this).siblings().removeClass("active");
-    $(this).addClass("active");
-    let idAttribute = $(this).attr("data-id");
-    console.log(idAttribute);
-    $(".new-product__area").find(`[data-carousel='${idAttribute}']`).addClass("active").siblings().removeClass("active");
-});
+// $(".new-product__section .section-header__action--tab li").on("click", function () {
+//     $(this).siblings().removeClass("active");
+//     $(this).addClass("active");
+//     let idAttribute = $(this).attr("data-id");
+//     console.log(idAttribute);
+//     $(".new-product__area").find(`[data-carousel='${idAttribute}']`).addClass("active").siblings().removeClass("active");
+// });
 
 });
 
@@ -252,6 +252,14 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+// New product tab
+$(".new-product-tabs li").on("click", function() {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+    let idAttribute = $(this).attr("data-id");
+    $(".new-product__area").find(`[data-carousel='${idAttribute}']`).addClass("active animate__slideInRight").siblings().removeClass("active animate__slideInRight");
+})
 
 // Featured tabs
 
