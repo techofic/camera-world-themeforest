@@ -239,6 +239,20 @@
   }
 }
 
+// Style the tab content
+.tabcontent {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.featuredtabcontent {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
 // Responsive
 @include breakpoint-max(1399px) {
   .newsletter-section {

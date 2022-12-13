@@ -35,7 +35,7 @@
 
     <!--************Header****************-->
 
-    <header class="header animate__animated">
+    <header class="header animate__animated not-sticky">
         <!-- Here we used "animate__animated" class for animating headder during scroll -->
         <div class="navbar navbar-expand-lg">
             <div class="container">
@@ -86,18 +86,28 @@
                                         <li><a class="dropdown-item" href="signIn.html">Sign In</a></li>
                                         <li><a class="dropdown-item" href="signUp.html">Sign Up</a></li>
                                         <li><a class="dropdown-item" href="#">Forget Password</a></li>
-                                        <li><a class="dropdown-item" href="#">Account</a>
-                                            <ul class="dropdown-menu nested-dropdown">
-                                                <li><a class="dropdown-item" href="dashboard-profile.html">Dashboard</a></li>
-                                                <li><a class="dropdown-item" href="dashboard-order.html">My Orders</a></li>
-                                                <li><a class="dropdown-item" href="dashboard-preOrder.html">My Pre-order</a></li>
-                                                <li><a class="dropdown-item" href="dashboard-notification.html">Notifications</a></li>
-                                                <li><a class="dropdown-item" href="dashboard-address.html">Address</a></li>
-                                                <li><a class="dropdown-item" href="dashboard-account.html">Account Details</a></li>
-                                                <li><a class="dropdown-item" href="dashboard-report.html">Report Issue</a></li>
+                                        <li class="nested-dropdown dropdown">
+                                            <a class="dropdown-item nested-dropdown-toggle dropdown-toggle" href="#">Account <i class="las la-angle-right"></i>
+                                            </a>
+                                            <ul class="dropdown-menu nested-dropdown--menu">
+                                                <li><a class="dropdown-item" href="dashboard-profile.html">Dashboard</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="dashboard-order.html">My Orders</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="dashboard-preOrder.html">My
+                                                        Pre-order</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="dashboard-notification.html">Notifications</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-address.html">Address</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="dashboard-account.html">Account
+                                                        Details</a></li>
+                                                <li><a class="dropdown-item" href="dashboard-report.html">Report
+                                                        Issue</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item" href="#">Others</a>
+                                        <li><a class="dropdown-item" href="#">Others <i
+                                                    class="las la-angle-right"></i></a>
                                             <ul class="dropdown-menu nested-dropdown">
                                                 <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
                                                 <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
@@ -133,7 +143,8 @@
                                 aria-controls="navbarSearchArea">
                                 <i class="las la-search"></i>
                             </li>
-                            <li><a href="signIn.html"><i class="las la-user"></i></a></li>
+                            <li><a href="signUp.html"><i class="las la-user"></i></a></li>
+
                             <li data-bs-toggle="offcanvas" data-bs-target="#navbarCartArea"
                                 aria-controls="navbarCartArea">
                                 <i class="las la-shopping-cart"></i>
@@ -212,48 +223,56 @@
                 </div>
             </div>
             <div class="shop-product--display">
-                <div class="shop-product--display---body">
-                    <div class="item dropdown">
-                        <a class="dropdown-toggle">
-                            <span>Products Categories</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">DSLR cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Bridge Cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Mirrorless cameras</a></li>
-                        </ul>
+                <div class="mobile-filter dropdown d-lg-none">
+                    <a class="dropdown-toggle">
+                        <span>Filter</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Products Categories</a>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Filter By Price</a></li>
+                        <li><a class="dropdown-item" href="#">Choose Tag</a></li>
+                    </ul>
+                </div>
+                <div class="shop-product--display---body d-none d-lg-flex">
+                    <div class="item">
+                        <select name="camera" id="lens">
+                            <option value="camera1">Products Categories</option>
+                            <option value="camera2">DSLR cameras</option>
+                            <option value="camera3">Bridge Cameras</option>
+                            <option value="camera4">Mirrorless cameras</option>
+                        </select>
                     </div>
-                    <div class="item dropdown">
-                        <a class="dropdown-toggle">
-                            <span>Filter By Price</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">DSLR cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Bridge Cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Mirrorless cameras</a></li>
-                        </ul>
+                    <div class="item">
+                        <select name="camera" id="lens">
+                            <option value="camera1">Filter By Price</option>
+                            <option value="camera2">DSLR cameras</option>
+                            <option value="camera3">Bridge Cameras</option>
+                            <option value="camera4">Mirrorless cameras</option>
+                        </select>
                     </div>
-                    <div class="item dropdown">
-                        <a class="dropdown-toggle">
-                            <span>Choose Tag</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">DSLR cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Bridge Cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Mirrorless cameras</a></li>
-                        </ul>
+                    <div class="item">
+                        <select name="camera" id="lens">
+                            <option value="camera1">Choose Tag</option>
+                            <option value="camera2">DSLR cameras</option>
+                            <option value="camera3">Bridge Cameras</option>
+                            <option value="camera4">Mirrorless cameras</option>
+                        </select>
                     </div>
                 </div>
                 <div class="shop-product--display--default">
-                    <div class="item dropdown">
-                        <a class="dropdown-toggle">
-                            <span>Default Sorting</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">DSLR cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Bridge Cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Mirrorless cameras</a></li>
-                        </ul>
+                    <div class="item">
+                        <select name="camera" id="lens">
+                            <option value="camera1">Default Sorting</option>
+                            <option value="camera2">DSLR cameras</option>
+                            <option value="camera3">Bridge Cameras</option>
+                            <option value="camera4">Mirrorless cameras</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -270,7 +289,229 @@
                                         New
                                     </div>
                                     <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">DSLR cameras</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        12%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
                                         <img src="assets/img/np1.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Digital Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Video Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Digital Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/hd1.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Digital Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/hd2.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Digital Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/fp1.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Digital Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/fp2.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Digital Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/fp3.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Digital Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/fp4.png" alt="Camera" />
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="product-card__content">
+                                <h3 class="product-card__content--title">Digital Camera</h3>
+                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="grid-item">
+                        <div class="product-card">
+                            <a href="product.html">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--red product-card__info--left">
+                                        15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--blue product-card__info--right">
+                                        New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/fp5.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -314,7 +555,7 @@
                                         New
                                     </div>
                                     <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
+                                        <img src="assets/img/np2.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -336,7 +577,7 @@
                                         New
                                     </div>
                                     <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
+                                        <img src="assets/img/np3.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -358,7 +599,7 @@
                                         New
                                     </div>
                                     <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
+                                        <img src="assets/img/np4.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -380,7 +621,7 @@
                                         New
                                     </div>
                                     <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
+                                        <img src="assets/img/hd1.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -402,7 +643,7 @@
                                         New
                                     </div>
                                     <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
+                                        <img src="assets/img/hd2.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -424,7 +665,7 @@
                                         New
                                     </div>
                                     <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
+                                        <img src="assets/img/fp1.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -446,7 +687,7 @@
                                         New
                                     </div>
                                     <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
+                                        <img src="assets/img/fp2.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -468,403 +709,7 @@
                                         New
                                     </div>
                                     <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
-                                    </figure>
-                                </div>
-                            </a>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="product-card">
-                            <a href="product.html">
-                                <div class="product-card__box">
-                                    <div class="product-card__info product-card__info--red product-card__info--left">
-                                        15%
-                                    </div>
-                                    <div class="product-card__info product-card__info--blue product-card__info--right">
-                                        New
-                                    </div>
-                                    <figure class="product-image">
-                                        <img src="assets/img/np1.png" alt="Camera" />
+                                        <img src="assets/img/fp3.png" alt="Camera" />
                                     </figure>
                                 </div>
                             </a>
@@ -877,6 +722,22 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="shop-pegination container pb-50">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1"><i class="las la-angle-left"></i></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="las la-angle-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 

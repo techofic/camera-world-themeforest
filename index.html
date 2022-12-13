@@ -86,7 +86,8 @@
                                         <li><a class="dropdown-item" href="signIn.html">Sign In</a></li>
                                         <li><a class="dropdown-item" href="signUp.html">Sign Up</a></li>
                                         <li><a class="dropdown-item" href="#">Forget Password</a></li>
-                                        <li><a class="dropdown-item" href="#">Account</a>
+                                        <li><a class="dropdown-item" href="#">Account <i
+                                            class="las la-angle-right"></i></a>
                                             <ul class="dropdown-menu nested-dropdown">
                                                 <li><a class="dropdown-item" href="dashboard-profile.html">Dashboard</a></li>
                                                 <li><a class="dropdown-item" href="dashboard-order.html">My Orders</a></li>
@@ -97,7 +98,8 @@
                                                 <li><a class="dropdown-item" href="dashboard-report.html">Report Issue</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item" href="#">Others</a>
+                                        <li><a class="dropdown-item" href="#">Others <i
+                                                    class="las la-angle-right"></i></a>
                                             <ul class="dropdown-menu nested-dropdown">
                                                 <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
                                                 <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
@@ -133,7 +135,8 @@
                                 aria-controls="navbarSearchArea">
                                 <i class="las la-search"></i>
                             </li>
-                            <li><a href="signIn.html"><i class="las la-user"></i></a></li>
+                                                        <li><a href="signUp.html"><i class="las la-user"></i></a></li>
+
                             <li data-bs-toggle="offcanvas" data-bs-target="#navbarCartArea"
                                 aria-controls="navbarCartArea">
                                 <i class="las la-shopping-cart"></i>
@@ -250,11 +253,11 @@
                     <div class="time-card">
                         <h3>Winter Sale</h3>
                         <h4 class="t-clr-secondary">Up to 40% Off</h4>
-                        <ul class="time-card__counter">
-                            <li><span>35</span>DAYS</li>
-                            <li><span>06</span>HRS</li>
-                            <li><span>46</span>MIN</li>
-                            <li><span>09</span>SEC</li>
+                        <ul class="time-card__counter clock" id="clock1">
+                            <li><span data-value="days"></span>DAYS</li>
+                            <li><span data-value="hours"></span>HRS</li>
+                            <li><span data-value="minutes"></span>MIN</li>
+                            <li><span data-value="seconds"></span>SEC</li>
                         </ul>
                         <a href="#" class="time-card__link">View All</a>
                     </div>
@@ -439,46 +442,7 @@
         </figure>
 
     </section>
-    <!-- <section class="product-info__section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 product-info__item">
-              <div
-                class="product-info__section--left product-info__section--content"
-              >
-                <h3>Discover The Best Travel Cameras</h3>
-                <p>Go to place where you're not going stresed</p>
-                <div class="product-info__section--action">
-                  <button class="button-camera">View More</button>
-                  <div class="product-info__shape">
-                    <span>ONLY</span>
-                    <h4>$103</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 product-info__item">
-              <div
-                class="product-info__section--right product-info__section--content"
-              >
-                <h3 style="color: white">Full Frame EF Camera</h3>
-                <p>Go to place where you're not going stresed</p>
-                <div class="product-info__section--action--right">
-                  <div class="product-info__specialOffer">SPECIAL OFFER</div>
-                  <div class="product-info__shape">
-                    <span>ONLY</span>
-                    <h4 style="color: white">$103</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-info__section--camera">
-          <img src="assets/img/skew-camera.png" alt="Camera" />
-        </div>
-    </section> -->
-
+    
     <!--***************New Product Section****************-->
 
     <section class="new-product__section bg-gray pt-100 pb-100">
@@ -486,97 +450,443 @@
             <div class="section-header">
                 <h2>New Product</h2>
                 <div class="section-header__action">
-                    <ul class="section-header__action--tab">
-                        <li class="active" data-id="new-carousel-1">DIGITAL CAMERA</li>
-                        <li data-id="new-carousel-2">FILM CAMERA</li>
-                        <li data-id="new-carousel-3">MEDIUM FORMAT</li>
-                        <li data-id="new-carousel-4">MIRRORLESS</li>
-                        <li data-id="new-carousel-5">360 CAMERAS</li>
+                    <ul class="section-header__action--tab tab">
+                        <li class="tablinks active" onclick="openTab(event,'first')">DIGITAL CAMERA</li>
+                        <li class="tablinks" onclick="openTab(event,'second')">FILM CAMERA</li>
+                        <li class="tablinks" onclick="openTab(event,'third')">MEDIUM FORMAT</li>
+                        <li class="tablinks" onclick="openTab(event,'fourth')">MIRRORLESS</li>
+                        <li class="tablinks" onclick="openTab(event,'fifth')">360 CAMERAS</li>
                     </ul>
                 </div>
             </div>
             <div class="new-product__area">
-                <div class="owl-carousel owl-theme new-product__carousel active" data-carousel="new-carousel-1"
-                    id="new-carousel-1">
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                <div id="first" class="tabcontent active">
+                    <div class="owl-carousel owl-theme new-product__carousel"
+                        id="new-carousel-1">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np1.png" alt="Product">
-                                </figure>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                </div>
+                <div id="second" class="tabcontent">
+                    <div class="owl-carousel owl-theme new-product__carousel">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np2.png" alt="Product">
-                                </figure>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                </div>
+                <div id="third" class="tabcontent">
+                    <div class="owl-carousel owl-theme new-product__carousel">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np3.png" alt="Product">
-                                </figure>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                </div>
+                <div id="fourth" class="tabcontent">
+                    <div class="owl-carousel owl-theme new-product__carousel">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np4.png" alt="Product">
-                                </figure>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                </div>
+                <div id="fifth" class="tabcontent">
+                    <div class="owl-carousel owl-theme new-product__carousel">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np1.png" alt="Product">
-                                </figure>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -634,99 +944,452 @@
             <div class="section-header">
                 <h2>Featured Product</h2>
                 <div class="section-header__action">
-                    <ul class="section-header__action--tab">
-                        <li class="active" data-id="featured-product-1">DIGITAL CAMERA</li>
-                        <li data-id="featured-product-2">FILM CAMERA</li>
-                        <li data-id="featured-product-3">MEDIUM FORMAT</li>
-                        <li data-id="featured-product-4">MIRRORLESS</li>
-                        <li data-id="featured-product-5">360 CAMERAS</li>
+                    <ul class="section-header__action--tab tab">
+                        <li class="featuredtablinks active" onclick="featuredTab(event,'featuredfirst')">DIGITAL CAMERA</li>
+                        <li class="featuredtablinks" onclick="featuredTab(event,'featuredsecond')">FILM CAMERA</li>
+                        <li class="featuredtablinks" onclick="featuredTab(event,'featuredthird')">MEDIUM FORMAT</li>
+                        <li class="featuredtablinks" onclick="featuredTab(event,'featuredfourth')">MIRRORLESS</li>
+                        <li class="featuredtablinks" onclick="featuredTab(event,'featuredfifth')">360 CAMERAS</li>
                     </ul>
                 </div>
             </div>
             <div class="featured-product__area">
-                <div class="owl-carousel owl-theme featured-product__carousel active" data-carousel="featured-product-1"
-                    id="featured-product-1">
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                <div id="featuredfirst" class="featuredtabcontent active">
+                    <div class="owl-carousel owl-theme featured-product__carousel active">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np1.png" alt="Product">
-                                </figure>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                </div>
+                <div id="featuredsecond" class="featuredtabcontent">
+                    <div class="owl-carousel owl-theme featured-product__carousel active">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np2.png" alt="Product">
-                                </figure>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                </div>
+                <div id="featuredthird" class="featuredtabcontent">
+                    <div class="owl-carousel owl-theme featured-product__carousel active">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np3.png" alt="Product">
-                                </figure>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                </div>
+                <div id="featuredfourth" class="featuredtabcontent">
+                    <div class="owl-carousel owl-theme featured-product__carousel active">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np4.png" alt="Product">
-                                </figure>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-card">
-                            <div class="product-card__box">
-                                <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                </div>
+                <div id="featuredfifth" class="featuredtabcontent">
+                    <div class="owl-carousel owl-theme featured-product__carousel active">
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
                                 </div>
-                                <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
                                 </div>
-                                <figure class="product-image">
-                                    <img src="assets/img/np1.png" alt="Product">
-                                </figure>
                             </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__content--title">Digital Camera</h3>
-                                <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
-                                <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np2.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np3.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np4.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="product-card">
+                                <div class="product-card__box">
+                                    <div class="product-card__info product-card__info--label1 product-card__info--left">15%
+                                    </div>
+                                    <div class="product-card__info product-card__info--label2 product-card__info--right">New
+                                    </div>
+                                    <figure class="product-image">
+                                        <img src="assets/img/np1.png" alt="Product">
+                                    </figure>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3 class="product-card__content--title">Digital Camera</h3>
+                                    <h4 class="product-card__content--subtitle">Sony ZV-1</h4>
+                                    <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                                </div>
                             </div>
                         </div>
                     </div>
