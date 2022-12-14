@@ -160,7 +160,7 @@
                     }
                 }
                 button {
-                    background-color: #ff0000;
+                    background-color: $secondaryColor;
                     color: #ffffff;
                     padding: 16px 55px;
                 }
@@ -415,9 +415,9 @@
                     max-width: 108px;
                     margin-left: auto;
                     button {
-                        border: 1px solid #FF0000;
+                        border: 1px solid $secondaryColor;
                         padding: 10px 30px;
-                        background-color: #FF0000;
+                        background-color: $secondaryColor;
                         color: #ffffff;
                         font-size: 14px;
                         border-radius: 5px;

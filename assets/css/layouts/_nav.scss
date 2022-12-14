@@ -99,6 +99,7 @@
                     li {
                         font-size: 1em;
                         font-weight: 500;
+                        position: relative;
 
                         a {
                             padding-left: 0.8em;
@@ -114,43 +115,22 @@
                             }
                         }
                     }
-                    
 
-                    // .nested-dropdown {
-                    //     position: relative;
-                    //     display: none;
-
-                    //     &:hover {
-                    //         display: inline-block;
-
-                    //         .nested-dropdown--menu {
-                    //             display: block;
-                    //             box-shadow: 0 4px 11px 2px rgb(0 0 0 / 7%);
-                    //             max-width: 250px;
-                    //             width: 100%;
-                    //             border: 0;
-                    //             border-radius: 5px;
-                    //         }
-                    //     }
-
-                    //     .nested-dropdown--menu {
-                    //         display: none;
-                    //         position: absolute;
-                    //         border: 0;
-                    //         border-radius: 5px;
-
-                    //         li {
-                    //             a {
-
-                    //                 &:hover,
-                    //                 &:focus,
-                    //                 &:active {
-                    //                     background-color: transparent;
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
+                    li > .nested-dropdown {
+                        display: block;
+                        left: 100%;
+                        position: absolute;
+                        top: -10px;
+                        transform: translateY(20px);
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: opacity 0.3s linear, transform 0.3s ease;
+                    }
+                    li:hover > .nested-dropdown {
+                        transform: translateY(0);
+                        opacity: 1;
+                        pointer-events: all;
+                    }
                 }
             }
 
@@ -356,11 +336,6 @@
 
 
 @include breakpoint-max(991px) {
-    // .navbar-content__item{
-    //     img{
-    //         max-width: 90%;
-    //     }
-    // }
     .offcanvas.navbar-content__item {
         max-width: 330px;
         width: 100%;
@@ -429,7 +404,7 @@
                             }
                         }
                         &:not(:last-child) {
-                            margin-bottom: 10px;
+                            margin-bottom: 20px;
                         }
                     }
                 }

@@ -22,7 +22,7 @@
 }
 
 .t-clr-secondary {
-  color: #FF0000 !important;
+  color: #FF3939 !important;
 }
 
 .pt-100 {
@@ -117,19 +117,19 @@ button:active, button:focus {
   padding: 0.9375em 1.875em;
   border-radius: 8px;
   border: 0;
-  background-color: #FF0000;
+  background-color: #FF3939;
   color: #ffffff;
   font-size: 1em;
+  transition: all 0.3s linear;
 }
 .main-btn__border {
-  border: 1px solid #FF0000;
+  border: 1px solid #FF3939;
   background-color: transparent;
-  color: #FF0000;
+  color: #FF3939;
 }
 .main-btn:hover {
-  background-color: #FF0000;
+  background-color: #FF3939;
   color: #ffffff;
-  transition: 0.3s linear;
 }
 
 @media (max-width: 767px) {
@@ -153,7 +153,7 @@ button:active, button:focus {
   font-size: 2.5em;
   font-weight: 900;
   margin-bottom: 0.6em;
-  color: #FF0000;
+  color: #FF3939;
 }
 .time-card__counter {
   margin-bottom: 1.4em;
@@ -223,7 +223,7 @@ button:active, button:focus {
 }
 /*************** hero_section ***************/
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: #FF0000;
+  background: #FF3939;
 }
 
 .owl-carousel .owl-item img {
@@ -238,7 +238,7 @@ button:active, button:focus {
   margin: 0;
   width: 50px;
   height: 50px;
-  color: #FF0000 !important;
+  color: #FF3939 !important;
   background-color: #ffffff !important;
   border-radius: 50%;
   box-shadow: 0px 0px 55px rgba(228, 228, 228, 0.55);
@@ -315,7 +315,7 @@ button:active, button:focus {
   padding: 40px 25px;
 }
 .product-card__single:hover .product-card__content--title {
-  color: #FF0000 !important;
+  color: #FF3939 !important;
   transition: 0.3s linear;
 }
 .product-card__info {
@@ -330,14 +330,14 @@ button:active, button:focus {
 }
 .product-card__info--left {
   left: 15px;
-  background-color: #FF0000;
+  background-color: #FF3939;
 }
 .product-card__info--right {
   right: 15px;
   background-color: #3d3b3b;
 }
 .product-card__info--label1 {
-  background-color: #FF0000;
+  background-color: #FF3939;
 }
 .product-card__info--label2 {
   background-color: #3D3B3B;
@@ -471,7 +471,7 @@ select:focus-visible, select:active {
 }
 .custom-input__append {
   padding: 18px 18px 18px 0;
-  color: #FF0000;
+  color: #FF3939;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -504,7 +504,7 @@ select:focus-visible, select:active {
   content: "\f00c";
   font-family: "Line Awesome Free";
   font-weight: 900;
-  color: #FF0000;
+  color: #FF3939;
 }
 .custom-input__checkbox label {
   position: relative;
@@ -583,7 +583,7 @@ select:focus-visible, select:active {
   margin-right: 9px;
 }
 .navbar-content__item--action li:hover {
-  color: #FF0000;
+  color: #FF3939;
 }
 .navbar-content__item--action li a {
   color: #010101;
@@ -598,7 +598,7 @@ select:focus-visible, select:active {
   transition: color 0.3s linear;
 }
 .navbar .navbar-nav .nav-item a.active {
-  color: #FF0000;
+  color: #FF3939;
 }
 .navbar .navbar-nav .nav-item a.dropdown-toggle:after {
   content: "\f107";
@@ -622,6 +622,7 @@ select:focus-visible, select:active {
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu li {
   font-size: 1em;
   font-weight: 500;
+  position: relative;
 }
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu li a {
   padding-left: 0.8em;
@@ -633,11 +634,26 @@ select:focus-visible, select:active {
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover, .navbar .navbar-nav .nav-item.dropdown .dropdown-menu li a:focus, .navbar .navbar-nav .nav-item.dropdown .dropdown-menu li a:active {
   background-color: transparent;
 }
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu li > .nested-dropdown {
+  display: block;
+  left: 100%;
+  position: absolute;
+  top: -10px;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s linear, transform 0.3s ease;
+}
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu li:hover > .nested-dropdown {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
 .navbar-action__badge {
   position: absolute;
   top: -9px;
   right: -9px;
-  background-color: #FF0000;
+  background-color: #FF3939;
   font-size: 0.65em;
   font-weight: 600;
   padding: 0 6px;
@@ -678,7 +694,7 @@ select:focus-visible, select:active {
   border-width: 1px 0 1px 1px;
 }
 .navbar-search .custom-input__append {
-  color: #FF0000;
+  color: #FF3939;
   font-size: 1.2em;
   padding: 10px 15px 10px 15px;
   border-color: #E3E3E3;
@@ -745,14 +761,14 @@ select:focus-visible, select:active {
 }
 .navbar-cart-model-body .cart-model-delete {
   font-size: 1.75em;
-  color: #FF0000;
+  color: #FF3939;
 }
 .navbar-cart-model-item {
   text-align: center;
 }
 .navbar-cart-model-item i {
   font-size: 45px;
-  color: #FF0000;
+  color: #FF3939;
   margin-bottom: 10px;
 }
 .navbar-cart-model-item h3 {
@@ -829,7 +845,7 @@ select:focus-visible, select:active {
     padding-right: 1.2em;
   }
   .offcanvas.navbar-content__item .offcanvas-body .navbar-nav:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -914,10 +930,14 @@ select:focus-visible, select:active {
   display: inline-block;
   cursor: pointer;
   margin-top: 2px;
-  color: gray;
+  color: #8F8F8F;
+  transition: all 0.3s linear;
 }
 .section-header__action--tab li.active {
-  color: #FF0000;
+  color: #FF3939;
+}
+.section-header__action--tab li:hover {
+  color: #FF3939;
 }
 .section-header__action--tab li:not(:last-child) {
   margin-right: 15px;
@@ -1012,7 +1032,7 @@ select:focus-visible, select:active {
   margin-right: 5px;
 }
 .footer-info__item--icon li a {
-  color: #FF0000;
+  color: #FF3939;
   font-size: 1.2em;
 }
 .footer-info__left .footer-info__item {
@@ -1327,7 +1347,7 @@ p {
 }
 .newsletter-section__content .custom-input__append {
   padding: 12px 30px;
-  background-color: #FF0000;
+  background-color: #FF3939;
   color: #ffffff;
 }
 .newsletter-section__content .custom-input__group {
@@ -1345,7 +1365,7 @@ p {
 }
 .article-section__date {
   font-size: 0.875em;
-  color: #FF0000;
+  color: #FF3939;
   margin-bottom: 10px;
 }
 .article-section__head {
@@ -1611,8 +1631,8 @@ p {
   margin-right: 15px;
 }
 .shop-searchBy--radio .form-check .form-check-input:checked {
-  background-color: #FF0000;
-  border-color: #FF0000;
+  background-color: #FF3939;
+  border-color: #FF3939;
 }
 .shop-searchBy--radio .form-check .form-check-input:active, .shop-searchBy--radio .form-check .form-check-input:focus {
   box-shadow: none;
@@ -1661,14 +1681,14 @@ p {
   transition: 0.5s linear;
 }
 .shop-searchBy--tag---list .tag-item:hover {
-  border: 1px solid #FF0000;
-  background-color: #FF0000;
+  border: 1px solid #FF3939;
+  background-color: #FF3939;
   color: #ffffff;
 }
 .shop-searchBy--tag---list .tag-item.active {
-  background-color: #FF0000;
+  background-color: #FF3939;
   color: #ffffff;
-  border-color: #FF0000;
+  border-color: #FF3939;
 }
 .shop-product {
   flex: 0 0 70%;
@@ -1722,7 +1742,7 @@ p {
   transition: 0.3s linear;
 }
 .shop-product--display---body .item select:hover {
-  color: #FF0000;
+  color: #FF3939;
 }
 .shop-product--display---body .item select:hover option {
   color: #010101;
@@ -1746,7 +1766,7 @@ p {
   transition: 0.3s linear;
 }
 .shop-product--display--default .item select:hover {
-  color: #FF0000;
+  color: #FF3939;
 }
 .shop-product--display--default .item select:hover option {
   color: #010101;
@@ -1755,7 +1775,7 @@ p {
   color: #010101;
 }
 .shop-product--display .mobile-filter a:hover {
-  color: #FF0000;
+  color: #FF3939;
 }
 .shop-product--display .mobile-filter .dropdown-toggle:after {
   content: "\f107";
@@ -1808,7 +1828,7 @@ p {
   margin-right: 10px;
 }
 .shop-product--mobile---filter button:hover {
-  color: #FF0000;
+  color: #FF3939;
 }
 .shop-product--mobile---dropdown .dropdown {
   position: relative;
@@ -1818,7 +1838,7 @@ p {
   display: block;
 }
 .shop-product--mobile---dropdown .dropdown:hover .dropbtn {
-  color: #FF0000;
+  color: #FF3939;
 }
 .shop-product--mobile---dropdown .dropdown .dropbtn {
   color: #010101;
@@ -1846,7 +1866,7 @@ p {
   font-size: 13px;
 }
 .shop-product--mobile---dropdown .dropdown .dropdown-content a:hover {
-  color: #FF0000;
+  color: #FF3939;
   font-size: 13px;
 }
 .shop-filter--mobile {
@@ -2081,7 +2101,7 @@ p {
   cursor: pointer;
 }
 .cart-section--table .table td i:hover {
-  color: #FF0000;
+  color: #FF3939;
 }
 .cart-section--coupon {
   display: flex;
@@ -2108,7 +2128,7 @@ p {
   width: 100%;
   padding: 15px 50px;
   color: #ffffff;
-  background-color: #FF0000;
+  background-color: #FF3939;
   border-radius: 5px;
   border: 1px solid transparent;
 }
@@ -2151,7 +2171,7 @@ p {
 .cart-section--bill .checkoutButton button {
   padding: 15px 50px;
   color: #ffffff;
-  background-color: #FF0000;
+  background-color: #FF3939;
   border-radius: 5px;
   border: 1px solid transparent;
 }
@@ -2425,7 +2445,7 @@ p {
   font-weight: 600;
   color: #ffffff;
   padding: 20px 35px;
-  background-color: #FF0000;
+  background-color: #FF3939;
   border-radius: 8px;
 }
 .about-learn--picture {
@@ -2714,7 +2734,7 @@ p {
   margin-bottom: 30px;
 }
 .feedback-contact--item---info .contact-icon {
-  color: #FF0000;
+  color: #FF3939;
   font-size: 30px;
   background-color: #fff0f0;
   border: none;
@@ -2813,7 +2833,7 @@ p {
   color: #ffffff;
   font-weight: 500;
   border-radius: 4px;
-  background-color: #FF0000;
+  background-color: #FF3939;
 }
 
 @media (max-width: 991px) {
@@ -3051,7 +3071,7 @@ p {
 }
 .billing-section .shipping-information .payment button {
   border: none;
-  background: #ff0000;
+  background: #FF3939;
   padding: 20px 20px;
   border-radius: 5px;
   color: #ffffff;
@@ -3190,7 +3210,7 @@ p {
   content: "";
   width: 10px;
   height: 10px;
-  background: #ff0000;
+  background: #FF3939;
   position: absolute;
   top: 3px;
   left: 3px;
@@ -3413,7 +3433,7 @@ p {
 }
 .signIn-section--card-input form button {
   width: 100%;
-  background-color: #FF0000;
+  background-color: #FF3939;
   border: none;
   padding: 20px;
   border-radius: 7px;
@@ -3427,7 +3447,7 @@ p {
   color: gray;
 }
 .signIn-section--card-input form p a {
-  color: #FF0000 !important;
+  color: #FF3939 !important;
 }
 .signIn-section--card-input form .custom-input__group {
   border: 1px solid #e3e3e3;
@@ -3653,7 +3673,7 @@ p {
 }
 .dashboard-myOrder--list---item .order-details button {
   color: #ffffff;
-  background-color: #FF0000;
+  background-color: #FF3939;
   padding: 8px 25px;
   font-size: 13px;
   font-weight: 400;
@@ -3749,7 +3769,7 @@ p {
   margin-bottom: 30px;
 }
 .dashboard-order--details---table table thead tr {
-  background-color: #FF0000;
+  background-color: #FF3939;
   color: #ffffff;
 }
 .dashboard-order--details---table table thead tr th {
@@ -3777,7 +3797,7 @@ p {
   font-weight: 600;
 }
 .dashboard-order--details button {
-  background-color: #FF0000;
+  background-color: #FF3939;
   text-align: center;
   font-size: 16px;
   color: #ffffff;
@@ -3796,7 +3816,7 @@ p {
 }
 .dashboard-notification .list--item i {
   font-size: 25px;
-  color: #FF0000;
+  color: #FF3939;
   margin-right: 20px;
 }
 .dashboard-notification .list--item .title {
@@ -3824,7 +3844,7 @@ p {
   margin-bottom: 15px;
 }
 .dashboard-address button {
-  background-color: #FF0000;
+  background-color: #FF3939;
   color: #ffffff;
   padding: 10px 15px;
   border-radius: 5px;
@@ -3900,7 +3920,7 @@ p {
   font-size: 11px;
 }
 .dashboard-account .account-details button {
-  background-color: #FF0000;
+  background-color: #FF3939;
   font-size: 16px;
   color: #ffffff;
   border-radius: 4px;
@@ -3971,7 +3991,7 @@ p {
   cursor: pointer;
 }
 .dashboard-report .report-details button {
-  background-color: #FF0000;
+  background-color: #FF3939;
   font-size: 16px;
   color: #ffffff;
   border-radius: 4px;
@@ -4373,7 +4393,7 @@ p {
 }
 .product-details--rating h4 span {
   font-size: 16px;
-  color: #FF0000;
+  color: #FF3939;
   font-weight: 200;
   text-decoration: line-through;
   margin-left: 10px;
@@ -4429,7 +4449,7 @@ p {
   color: #010101;
 }
 .product-details--quantity---button button {
-  background-color: #ff0000;
+  background-color: #FF3939;
   color: #ffffff;
   padding: 16px 55px;
 }
@@ -4493,7 +4513,7 @@ p {
   margin-bottom: 0;
 }
 .tab-section .section-header__action--tab li.active {
-  border-bottom: 4px solid #FF0000;
+  border-bottom: 4px solid #FF3939;
   transition: 0.1s linear;
 }
 .tab-section .section-header__action--tab li:not(:last-child) {
@@ -4665,9 +4685,9 @@ p {
   margin-left: auto;
 }
 .tab-section .review-tab--input .submit-button button {
-  border: 1px solid #FF0000;
+  border: 1px solid #FF3939;
   padding: 10px 30px;
-  background-color: #FF0000;
+  background-color: #FF3939;
   color: #ffffff;
   font-size: 14px;
   border-radius: 5px;
@@ -4880,7 +4900,7 @@ p {
     font-size: 18px;
   }
   .tab-section .section-header__action--tab li.active {
-    border-bottom: 3px solid #FF0000;
+    border-bottom: 3px solid #FF3939;
   }
   .tab-section .section-header__action--tab li:not(:last-child) {
     margin-right: 50px;
@@ -5020,11 +5040,11 @@ body {
 }
 
 a {
-  color: #FF0000;
-  transition: 0.3s linear;
+  color: #FF3939;
+  transition: all 0.3s linear;
 }
 a:hover {
-  color: #FF0000 !important;
+  color: #FF3939 !important;
 }
 
 .offcanvas {

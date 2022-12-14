@@ -24,8 +24,12 @@
                 display: inline-block;
                 cursor: pointer;
                 margin-top: 2px;
-                color: gray;
+                color: #8F8F8F;
+                transition: all 0.3s linear;
                 &.active {
+                    color: $secondaryColor;
+                }
+                &:hover {
                     color: $secondaryColor;
                 }
                 &:not(:last-child) {
