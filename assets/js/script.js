@@ -90,7 +90,7 @@ jQuery(function ($) {
                 secs,
             };
         }
-    
+
         updateTimer({ days, hours, mins, secs }) {
             this.refs.days.textContent = days;
             this.refs.hours.textContent = hours;
@@ -104,7 +104,7 @@ jQuery(function ($) {
                 this.refs.mins.style.background = this.backgroundColor;
                 this.refs.secs.style.background = this.backgroundColor;
             }
-    
+
             if (this.foregroundColor != null) {
                 this.refs.days.style.color = this.foregroundColor;
                 this.refs.hours.style.color = this.foregroundColor;
@@ -112,7 +112,7 @@ jQuery(function ($) {
                 this.refs.secs.style.color = this.foregroundColor;
             }
         }
-    
+
         startTimer() {
             const timer = this.getTimeRemaining(this.targetDate);
             this.updateTimer(timer);
@@ -127,25 +127,17 @@ jQuery(function ($) {
         selector: "#clock1",
         targetDate: new Date("January, 21 2023 18:00:00"),
     });
-    
-    timer.startTimer(); 
 
+    timer.startTimer();
 
+    // Hot Deals Carousel
 
-
-
-
-
-
-
-        // Hot Deals Carousel
-
-        $('.hot-deals__carousel').owlCarousel({
-            loop: true,
-            margin: 15,
-            nav: true,
-            dots: false,
-            navText: ["<i class='las la-angle-left'></i>", "<i class='las la-angle-right'></i>"],
+    $('.hot-deals__carousel').owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        dots: false,
+        navText: ["<i class='las la-angle-left'></i>", "<i class='las la-angle-right'></i>"],
         responsive: {
             0: {
                 items: 1.2
@@ -162,37 +154,49 @@ jQuery(function ($) {
         }
     })
 
-// New Product Carousel starts
+    // New Product Carousel starts
 
-$('.new-product__carousel').owlCarousel({
+    $('.new-product__carousel').owlCarousel({
+        loop: true,
+        margin: 24,
+        nav: true,
+        dots: false,
+        navText: ["<i class='las la-angle-left'></i>", "<i class='las la-angle-right'></i>"],
+        responsive: {
+            0: {
+                items: 1.2
+            },
+            500: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+
+});
+
+// Min Product Carousel
+
+$('.min-product__carousel').owlCarousel({
     loop: true,
-    margin: 24,
-    nav: true,
+    margin: 15,
+    nav: false,
     dots: false,
     navText: ["<i class='las la-angle-left'></i>", "<i class='las la-angle-right'></i>"],
     responsive: {
         0: {
-            items: 1.2
+            items: 3
         },
-        500: {
-            items: 2
+        600: {
+            items: 3
         },
-        1000: {
-            items: 4
+        1200: {
+            items: 3
         }
     }
 })
-
-// Selection tab
-// $(".new-product__section .section-header__action--tab li").on("click", function () {
-//     $(this).siblings().removeClass("active");
-//     $(this).addClass("active");
-//     let idAttribute = $(this).attr("data-id");
-//     console.log(idAttribute);
-//     $(".new-product__area").find(`[data-carousel='${idAttribute}']`).addClass("active").siblings().removeClass("active");
-// });
-
-});
 
 // Trending Offers Carousel starts
 $('.trending-offers__carousel').owlCarousel({
@@ -217,7 +221,6 @@ $('.trending-offers__carousel').owlCarousel({
 
 // Featured product Carousel starts
 
-
 $('.featured-product__carousel').owlCarousel({
     loop: true,
     margin: 24,
@@ -239,50 +242,135 @@ $('.featured-product__carousel').owlCarousel({
 
 // tabs
 
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
 // New product tab
-$(".new-product-tabs li").on("click", function() {
+$(".new-product-tabs li").on("click", function () {
     $(this).siblings().removeClass("active");
     $(this).addClass("active");
     let idAttribute = $(this).attr("data-id");
     $(".new-product__area").find(`[data-carousel='${idAttribute}']`).addClass("active animate__slideInRight").siblings().removeClass("active animate__slideInRight");
 })
 
-// Featured tabs
+// Featured product tab
+$(".featured-product-tabs li").on("click", function () {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+    let idAttribute = $(this).attr("data-id");
+    $(".featured-product__area").find(`[data-carousel='${idAttribute}']`).addClass("active animate__slideInRight").siblings().removeClass("active animate__slideInRight");
+})
 
-function featuredTab(evt, featuredtabName) {
-    var i, featuredtabcontent, featuredtablinks;
-    featuredtabcontent = document.getElementsByClassName("featuredtabcontent");
-    for (i = 0; i < featuredtabcontent.length; i++) {
-        featuredtabcontent[i].style.display = "none";
+// Product tab
+$(".product-tabs li").on("click", function () {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+    let idAttribute = $(this).attr("data-id");
+    $(".product-area").find(`[data-carousel='${idAttribute}']`).addClass("active animate__slideInRight").siblings().removeClass("active animate__slideInRight");
+})
+
+// Single Product Page
+
+// reply show
+
+$(document).ready(function(){
+    $("#show1").click(function(){
+      $(".first").css({
+        display : 'block' ,
+        transition : 'all 0.3s ease-in-out',
+      });
+    });
+    $("#show2").click(function(){
+        $(".second").css("display", "block");
+      });
+      $("#show3").click(function(){
+        $(".third").css("display", "block");
+      });
+  });
+
+
+
+
+
+
+
+////////////////////////////////////////////
+
+$(document).ready(function() {
+
+    var sync1 = $("#sync1");
+    var sync2 = $("#sync2");
+    var slidesPerPage = 4; //globaly define number of elements per page
+    var syncedSecondary = true;
+  
+    sync1.owlCarousel({
+      items : 1,
+      slideSpeed : 2000,
+      nav: false,
+      autoplay: false,
+      dots: false,
+      loop: true,
+      responsiveRefreshRate : 200,
+      margin: 20,
+  
+    }).on('changed.owl.carousel', syncPosition);
+  
+    sync2
+      .on('initialized.owl.carousel', function () {
+        sync2.find(".owl-item").eq(0).addClass("current");
+      })
+      .owlCarousel({
+      items : slidesPerPage,
+      dots: true,
+      nav: false,
+      smartSpeed: 200,
+      slideSpeed : 500,
+      slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+      responsiveRefreshRate : 100,
+      
+    }).on('changed.owl.carousel', syncPosition2);
+  
+    function syncPosition(el) {
+      //if you set loop to false, you have to restore this next line
+      //var current = el.item.index;
+      
+      //if you disable loop you have to comment this block
+      var count = el.item.count-1;
+      var current = Math.round(el.item.index - (el.item.count/2) - .5);
+      
+      if(current < 0) {
+        current = count;
+      }
+      if(current > count) {
+        current = 0;
+      }
+      
+      //end block
+  
+      sync2
+        .find(".owl-item")
+        .removeClass("current")
+        .eq(current)
+        .addClass("current");
+      var onscreen = sync2.find('.owl-item.active').length - 1;
+      var start = sync2.find('.owl-item.active').first().index();
+      var end = sync2.find('.owl-item.active').last().index();
+      
+      if (current > end) {
+        sync2.data('owl.carousel').to(current, 100, true);
+      }
+      if (current < start) {
+        sync2.data('owl.carousel').to(current - onscreen, 100, true);
+      }
     }
-    featuredtablinks = document.getElementsByClassName("featuredtablinks");
-    for (i = 0; i < featuredtablinks.length; i++) {
-        featuredtablinks[i].className = featuredtablinks[i].className.replace(" active", "");
+    
+    function syncPosition2(el) {
+      if(syncedSecondary) {
+        var number = el.item.index;
+        sync1.data('owl.carousel').to(number, 100, true);
+      }
     }
-    document.getElementById(featuredtabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-
-// // Selection tab
-// $(".featured-product__section .section-header__action--tab li").on("click", function () {
-//     $(this).siblings().removeClass("active");
-//     $(this).addClass("active");
-//     let idAttribute = $(this).attr("data-id");
-//     $(".featured-product__area").find(`[data-carousel='${idAttribute}']`).addClass("active").siblings().removeClass("active");
-// });
-
+    
+    sync2.on("click", ".owl-item", function(e){
+      e.preventDefault();
+      var number = $(this).index();
+      sync1.data('owl.carousel').to(number, 300, true);
+    });
+  });

@@ -67,7 +67,7 @@
                                 <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#">
+                                    <a class="nav-link dropdown-toggle active" href="#">
                                         Shop
                                     </a>
                                     <ul class="dropdown-menu">
@@ -86,6 +86,15 @@
                                         <li><a class="dropdown-item" href="signIn.html">Sign In</a></li>
                                         <li><a class="dropdown-item" href="signUp.html">Sign Up</a></li>
                                         <li><a class="dropdown-item" href="forget-pass.html">Forget Password</a></li>
+                                        <li><a class="dropdown-item" href="#">Blogs <i
+                                                    class="las la-angle-right"></i></a>
+                                            <ul class="dropdown-menu nested-dropdown">
+                                                <li><a class="dropdown-item" href="blog-grid.html">Blogs Grid</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="blog-single.html">Single Blog</a>
+                                                </li>
+                                            </ul>
+                                        </li>
                                         <li><a class="dropdown-item" href="#">Account <i
                                                     class="las la-angle-right"></i></a>
                                             <ul class="dropdown-menu nested-dropdown">
@@ -108,7 +117,8 @@
                                         <li><a class="dropdown-item" href="#">Others <i
                                                     class="las la-angle-right"></i></a>
                                             <ul class="dropdown-menu nested-dropdown">
-                                                <li><a class="dropdown-item" href="terms.html">Terms & Conditions</a></li>
+                                                <li><a class="dropdown-item" href="terms.html">Terms & Conditions</a>
+                                                </li>
                                                 <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
                                                 <li><a class="dropdown-item" href="#">Coming Soon</a></li>
                                                 <li><a class="dropdown-item" href="#">Search Page</a></li>
@@ -160,16 +170,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="hero-info bg-gray">
-            <div class="container">
-                <div class="hero-info__content">
-                    <div class="hero-info__content--item d-none d-lg-block">Refer a Friend. Get 20% Off</div>
-                    <div class="hero-info__content--item d-none d-lg-block">Subscribe Today Get $10 Off</div>
-                    <div class="hero-info__content--item d-none d-lg-block">Free Shipping +30 Day Returns</div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- Search Offcanvas -->
@@ -209,191 +209,68 @@
         </div>
     </div>
 
-    <!--***************Checkout Section***************-->
+    <!-- Blog Grid -->
 
-    <div class="billing-cupon container pt-50">
-        <button>Returning customer? Click here to login</button>
-        <button>Have A Cupon ? Click Here To Enter Your Code</button>
+    <div class="header-page" style="background-image:url(assets/img/Frame.png) ; background-size: cover;">
+        <div class="header-page--title">
+            <h3>Blog Grid</h3>
+            <div class="header-page--item">
+                <a href="index.html">Home</a>
+                <p> / Grid</p>
+            </div>
+        </div>
     </div>
 
-    <section class="container">
-        <div class="billing-section">
-            <div class="billing-information">
-                <div class="billing-details pb-50">
-                    <h4 class="title">Billing Details</h4>
-                    <div class="input-group">
-                        <label>Name *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Bangladesh" />
-                        </div>
-                    </div>
-                    <div class="billing-details--email">
-                        <div class="billing-details--email---item">
-                            <div class="input-group">
-                                <label>Email *</label>
-                                <div class="custom-input__group">
-                                    <input class="custom-input__field" type="email" placeholder="Email" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="billing-details--email---item">
-                            <div class="input-group">
-                                <label>Phone *</label>
-                                <div class="custom-input__group">
-                                    <input class="custom-input__field" type="number" placeholder="Phone" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="billing-details--select">
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your City*</label>
-                                <select name="city" id="city">
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="dhaka">Dhaka</option>
-                                    <option value="rangpur">Rangpur</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your Zone*</label>
-                                <select name="city" id="city">
-                                    <option value="rangpur">Rangpur</option>
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="dhaka">Dhaka</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your Area*</label>
-                                <select name="city" id="city">
-                                    <option value="dhaka">Dhaka</option>
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="rangpur">Rangpur</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Address *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Street Address" />
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Postcode / Zip *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Postcode / Zip" />
-                        </div>
-                    </div>
+    <section class="trending-section pt-50 pb-50">
+        <div class="trending-product container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 article-section pb-30">
+                    <img class="article-section__img" src="assets/img/article1.png" alt="">
+                    <p class="article-section__date">MAY 20, 2020</p>
+                    <h4 class="article-section__head">The Importance Importance of Cameras..........</h4>
+                    <p class="article-section__para">Sed ut perspiciatis unde omnis iste natus error sit volupta
+                        accusantium doloremque laudantium, totam rem aperia,
+                        eaque natus error sit voluptatem
+                    </p>
+                    <a href="#" class="article-section__button">Read More</a>
                 </div>
-                <div class="order-summery pb-50">
-                    <h4 class="title">Your Order</h4>
-
-                    <div class="order-list">
-                        <div class="order-list--item1 order-list--header">
-                            <h4 class="order-list--item---title">Product</h4>
-                            <p class="order-list--item---info">Total</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                    </div>
-                    <div class="order-select">
-                        <form>
-                            <p>
-                                <input type="radio" id="test1" name="radio-group" checked />
-                                <label for="test1">Flat Rate: $7.00</label>
-                            </p>
-                            <p>
-                                <input type="radio" id="test2" name="radio-group" />
-                                <label for="test2">Free Shipping</label>
-                            </p>
-                        </form>
-                    </div>
-                    <div class="order-total">
-                        <div class="order-list--item order-list--body">
-                            <h4 class="order-list--item---title">Sub Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
-                        <div class="order-list--item order-list--body">
-                            <h4 class="order-list--item---title">Grand Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
-                        <div class="order-list--item order-list--header">
-                            <h4 class="order-list--item---title">Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
-                    </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 article-section pb-30">
+                    <img class="article-section__img" src="assets/img/article2.png" alt="">
+                    <p class="article-section__date">June 28, 2020</p>
+                    <h4 class="article-section__head">The Importance Importance of Cameras..........</h4>
+                    <p class="article-section__para">Sed ut perspiciatis unde omnis iste natus error sit volupta
+                        accusantium doloremque laudantium, totam rem aperia,
+                        eaque natus error sit voluptatem
+                    </p>
+                    <a href="#" class="article-section__button">Read More</a>
                 </div>
-            </div>
-            <div class="shipping-information">
-                <div class="shipping-details pb-50">
-                    <h4 class="title">Shipping Details</h4>
-                    <div class="custom-input__checkbox">
-                        <input type="checkbox" id="shipping" />
-                        <label for="shipping">Ship to a different address?</label>
-                    </div>
-                    <h5>Order Notes</h5>
-                    <form>
-                        <textarea placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                    </form>
-                </div>
-
-                <div class="payment pb-50">
-                    <h4 class="title">Payment</h4>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment1" />
-                            <label for="payment1"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/cashondelivery.png" alt="cod" />
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment2" />
-                            <label for="payment2"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/bkash.png" alt="cod" />
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment3" />
-                            <label for="payment3"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/paymentGateway.png" alt="cod" />
-                            </figure>
-                        </div>
-                    </div>
-                    <button>Place Order</button>
+                <div class="col-lg-4 col-md-6 col-sm-6 article-section pb-30">
+                    <img class="article-section__img" src="assets/img/article3.png" alt="">
+                    <p class="article-section__date">September 03, 2021</p>
+                    <h4 class="article-section__head">The Importance Importance of Cameras..........</h4>
+                    <p class="article-section__para">Sed ut perspiciatis unde omnis iste natus error sit volupta
+                        accusantium doloremque laudantium, totam rem aperia,
+                        eaque natus error sit voluptatem
+                    </p>
+                    <a href="#" class="article-section__button">Read More</a>
                 </div>
             </div>
         </div>
 
+        <div class="shop-pegination container">
+            <ul class="justify-content-center">
+                <li class="page-item">
+                    <a href="#"><i class="las la-angle-left"></i></a>
+                </li>
+                <li class="page-item"><a href="#">1</a></li>
+                <li class="page-item"><a href="#">2</a></li>
+                <li class="page-item"><a href="#">3</a></li>
+                <li class="page-item">
+                    <a href="#"><i class="las la-angle-right"></i></a>
+                </li>
+            </ul>
+        </div>
     </section>
-
 
     <!--***************Footer****************-->
 
@@ -501,7 +378,6 @@
 
     </footer>
 
-
     <!--================= Link Script Here =================-->
     <!-- Vendor Script -->
     <script src="./assets/js/vendor/jquery-3.6.1.min.js"></script>
@@ -510,6 +386,4 @@
 
     <!-- Main Script -->
     <script src="./assets/js/script.js"></script>
-
-
 </body>

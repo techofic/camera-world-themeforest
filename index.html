@@ -72,7 +72,7 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="shop.html">Shop Grid</a></li>
-                                        <li><a class="dropdown-item" href="#">Shop List</a></li>
+                                        <li><a class="dropdown-item" href="shop-list.html">Shop List</a></li>
                                         <li><a class="dropdown-item" href="product.html">Single Shop</a></li>
                                         <li><a class="dropdown-item" href="cart.html">Cart</a></li>
                                         <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
@@ -85,7 +85,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="signIn.html">Sign In</a></li>
                                         <li><a class="dropdown-item" href="signUp.html">Sign Up</a></li>
-                                        <li><a class="dropdown-item" href="#">Forget Password</a></li>
+                                        <li><a class="dropdown-item" href="forget-pass.html">Forget Password</a></li>
                                         <li><a class="dropdown-item" href="#">Account <i
                                             class="las la-angle-right"></i></a>
                                             <ul class="dropdown-menu nested-dropdown">
@@ -101,8 +101,8 @@
                                         <li><a class="dropdown-item" href="#">Others <i
                                                     class="las la-angle-right"></i></a>
                                             <ul class="dropdown-menu nested-dropdown">
-                                                <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
-                                                <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                                                <li><a class="dropdown-item" href="terms.html">Terms & Conditions</a></li>
+                                                <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
                                                 <li><a class="dropdown-item" href="#">Coming Soon</a></li>
                                                 <li><a class="dropdown-item" href="#">Search Page</a></li>
                                                 <li><a class="dropdown-item" href="#">404 Error Page</a></li>
@@ -944,17 +944,17 @@
             <div class="section-header">
                 <h2>Featured Product</h2>
                 <div class="section-header__action">
-                    <ul class="section-header__action--tab tab">
-                        <li class="featuredtablinks active" onclick="featuredTab(event,'featuredfirst')">DIGITAL CAMERA</li>
-                        <li class="featuredtablinks" onclick="featuredTab(event,'featuredsecond')">FILM CAMERA</li>
-                        <li class="featuredtablinks" onclick="featuredTab(event,'featuredthird')">MEDIUM FORMAT</li>
-                        <li class="featuredtablinks" onclick="featuredTab(event,'featuredfourth')">MIRRORLESS</li>
-                        <li class="featuredtablinks" onclick="featuredTab(event,'featuredfifth')">360 CAMERAS</li>
+                    <ul class="section-header__action--tab tab featured-product-tabs">
+                        <li class="tablinks active" data-id="first">DIGITAL CAMERA</li>
+                        <li class="tablinks" data-id="second">FILM CAMERA</li>
+                        <li class="tablinks" data-id="third">MEDIUM FORMAT</li>
+                        <li class="tablinks" data-id="fourth">MIRRORLESS</li>
+                        <li class="tablinks" data-id="fifth">360 CAMERAS</li>
                     </ul>
                 </div>
             </div>
             <div class="featured-product__area">
-                <div id="featuredfirst" class="featuredtabcontent active">
+                <div class="tabcontent animate__animated active" data-carousel="first">
                     <div class="owl-carousel owl-theme featured-product__carousel active">
                         <div class="item">
                             <div class="product-card">
@@ -1042,7 +1042,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="featuredsecond" class="featuredtabcontent">
+                <div class="tabcontent animate__animated" data-carousel="second">
                     <div class="owl-carousel owl-theme featured-product__carousel active">
                         <div class="item">
                             <div class="product-card">
@@ -1130,7 +1130,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="featuredthird" class="featuredtabcontent">
+                <div class="tabcontent animate__animated" data-carousel="third">
                     <div class="owl-carousel owl-theme featured-product__carousel active">
                         <div class="item">
                             <div class="product-card">
@@ -1218,7 +1218,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="featuredfourth" class="featuredtabcontent">
+                <div class="tabcontent animate__animated" data-carousel="fourth">
                     <div class="owl-carousel owl-theme featured-product__carousel active">
                         <div class="item">
                             <div class="product-card">
@@ -1306,7 +1306,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="featuredfifth" class="featuredtabcontent">
+                <div class="tabcontent animate__animated" data-carousel="fifth">
                     <div class="owl-carousel owl-theme featured-product__carousel active">
                         <div class="item">
                             <div class="product-card">

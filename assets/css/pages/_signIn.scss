@@ -9,15 +9,14 @@
         max-width: 550px;
         margin-left: auto;
         margin-right: auto;
-        border: 1px solid #E3E3E3;
         border-radius: 8px;
         background-color: #ffffff;
-        box-shadow: 0px 0px 10px 3px #faf7f7;
+        box-shadow: 0px 0px 6px rgba(108, 115, 122, 0.19);
         padding: 85px 75px;
         &-logo {
             text-align: center;
             img {
-                max-width: 180px;
+                max-width: 220px;
                 height: auto;
                 margin-bottom: 25px;
             }
@@ -45,9 +44,17 @@
                     color: $primaryColor;
                     font-size: 24px;
                     font-weight: 500;
-                    margin-bottom: 25px;
+                    margin-bottom: 50px;
                     text-align: center;
                     width: 100%;
+                }
+                .forget-pass-title {
+                    margin-bottom: 15px;
+                }
+                .forget-pass-text {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    color: $primaryColor;
                 }
                 button {
                     width: 100%;
@@ -104,6 +111,8 @@
         padding-right: 30px;
         &--card {
             max-width: 400px;
+            padding: 55px 40px;
+
             &-input {
                 max-width: 320px;
                 padding: 10px;
@@ -159,14 +168,18 @@
 @include breakpoint-max(380px) {
     .signIn-section{
         &--card {
-            padding: 10px;
+            padding: 25px;
             &-logo {
                 img {
                     max-width: 150px;
+                    margin-bottom: 10px;
                 }
             }
             &-input {
                 form {
+                    h4 {
+                        font-size: 18px;
+                    }
                     .form {
                         &-check__box {
                             p {

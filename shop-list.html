@@ -67,7 +67,7 @@
                                 <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#">
+                                    <a class="nav-link dropdown-toggle active" href="#">
                                         Shop
                                     </a>
                                     <ul class="dropdown-menu">
@@ -160,16 +160,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="hero-info bg-gray">
-            <div class="container">
-                <div class="hero-info__content">
-                    <div class="hero-info__content--item d-none d-lg-block">Refer a Friend. Get 20% Off</div>
-                    <div class="hero-info__content--item d-none d-lg-block">Subscribe Today Get $10 Off</div>
-                    <div class="hero-info__content--item d-none d-lg-block">Free Shipping +30 Day Returns</div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- Search Offcanvas -->
@@ -209,191 +199,234 @@
         </div>
     </div>
 
-    <!--***************Checkout Section***************-->
+    <!-----**************Shop Section************---->
 
-    <div class="billing-cupon container pt-50">
-        <button>Returning customer? Click here to login</button>
-        <button>Have A Cupon ? Click Here To Enter Your Code</button>
-    </div>
-
-    <section class="container">
-        <div class="billing-section">
-            <div class="billing-information">
-                <div class="billing-details pb-50">
-                    <h4 class="title">Billing Details</h4>
-                    <div class="input-group">
-                        <label>Name *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Bangladesh" />
-                        </div>
+    <div class="shop-section container pt-50">
+        <div class="shop-product">
+            <div class="shop-product--search">
+                <div class="custom-input__group">
+                    <button class="custom-input__prepend">
+                        <i class="la la-search"></i>
+                    </button>
+                    <input type="text" placeholder="What would to like to buy" class="custom-input__field" />
+                </div>
+            </div>
+            <div class="shop-product--display">
+                <div class="mobile-filter dropdown d-lg-none">
+                    <a class="dropdown-toggle">
+                        <span>Filter</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Products Categories</a>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Filter By Price</a></li>
+                        <li><a class="dropdown-item" href="#">Choose Tag</a></li>
+                    </ul>
+                </div>
+                <div class="shop-product--display---body d-none d-lg-flex">
+                    <div class="item">
+                        <select name="camera" id="lens">
+                            <option value="camera1">Products Categories</option>
+                            <option value="camera2">DSLR cameras</option>
+                            <option value="camera3">Bridge Cameras</option>
+                            <option value="camera4">Mirrorless cameras</option>
+                        </select>
                     </div>
-                    <div class="billing-details--email">
-                        <div class="billing-details--email---item">
-                            <div class="input-group">
-                                <label>Email *</label>
-                                <div class="custom-input__group">
-                                    <input class="custom-input__field" type="email" placeholder="Email" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="billing-details--email---item">
-                            <div class="input-group">
-                                <label>Phone *</label>
-                                <div class="custom-input__group">
-                                    <input class="custom-input__field" type="number" placeholder="Phone" />
-                                </div>
-                            </div>
-                        </div>
+                    <div class="item">
+                        <select name="camera" id="lens">
+                            <option value="camera1">Filter By Price</option>
+                            <option value="camera2">DSLR cameras</option>
+                            <option value="camera3">Bridge Cameras</option>
+                            <option value="camera4">Mirrorless cameras</option>
+                        </select>
                     </div>
-                    <div class="billing-details--select">
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your City*</label>
-                                <select name="city" id="city">
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="dhaka">Dhaka</option>
-                                    <option value="rangpur">Rangpur</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your Zone*</label>
-                                <select name="city" id="city">
-                                    <option value="rangpur">Rangpur</option>
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="dhaka">Dhaka</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your Area*</label>
-                                <select name="city" id="city">
-                                    <option value="dhaka">Dhaka</option>
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="rangpur">Rangpur</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Address *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Street Address" />
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Postcode / Zip *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Postcode / Zip" />
-                        </div>
+                    <div class="item">
+                        <select name="camera" id="lens">
+                            <option value="camera1">Choose Tag</option>
+                            <option value="camera2">DSLR cameras</option>
+                            <option value="camera3">Bridge Cameras</option>
+                            <option value="camera4">Mirrorless cameras</option>
+                        </select>
                     </div>
                 </div>
-                <div class="order-summery pb-50">
-                    <h4 class="title">Your Order</h4>
-
-                    <div class="order-list">
-                        <div class="order-list--item1 order-list--header">
-                            <h4 class="order-list--item---title">Product</h4>
-                            <p class="order-list--item---info">Total</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                    </div>
-                    <div class="order-select">
-                        <form>
-                            <p>
-                                <input type="radio" id="test1" name="radio-group" checked />
-                                <label for="test1">Flat Rate: $7.00</label>
-                            </p>
-                            <p>
-                                <input type="radio" id="test2" name="radio-group" />
-                                <label for="test2">Free Shipping</label>
-                            </p>
-                        </form>
-                    </div>
-                    <div class="order-total">
-                        <div class="order-list--item order-list--body">
-                            <h4 class="order-list--item---title">Sub Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
-                        <div class="order-list--item order-list--body">
-                            <h4 class="order-list--item---title">Grand Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
-                        <div class="order-list--item order-list--header">
-                            <h4 class="order-list--item---title">Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
+                <div class="shop-product--display--default">
+                    <div class="item">
+                        <select name="camera" id="lens">
+                            <option value="camera1">Default Sorting</option>
+                            <option value="camera2">Sort By Popularity</option>
+                            <option value="camera3">Sort By Price : Low To High</option>
+                            <option value="camera4">Sort By Price : High To Low</option>
+                        </select>
                     </div>
                 </div>
             </div>
-            <div class="shipping-information">
-                <div class="shipping-details pb-50">
-                    <h4 class="title">Shipping Details</h4>
-                    <div class="custom-input__checkbox">
-                        <input type="checkbox" id="shipping" />
-                        <label for="shipping">Ship to a different address?</label>
+            <div class="shop-list--item">
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
                     </div>
-                    <h5>Order Notes</h5>
-                    <form>
-                        <textarea placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                    </form>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="payment pb-50">
-                    <h4 class="title">Payment</h4>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment1" />
-                            <label for="payment1"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/cashondelivery.png" alt="cod" />
-                            </figure>
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
+                    </div>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
                         </div>
                     </div>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment2" />
-                            <label for="payment2"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/bkash.png" alt="cod" />
-                            </figure>
+                </div>
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
+                    </div>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
                         </div>
                     </div>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment3" />
-                            <label for="payment3"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/paymentGateway.png" alt="cod" />
-                            </figure>
+                </div>
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
+                    </div>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
                         </div>
                     </div>
-                    <button>Place Order</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
+                    </div>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
+                    </div>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
+                    </div>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
+                    </div>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card--img">
+                        <figure class="product-image">
+                            <img src="assets/img/np2.png" alt="Camera" />
+                        </figure>
+                    </div>
+                    <div class="product-card--details">
+                        <h3 class="product-card__content--title">DSLR cameras</h3>
+                        <h4 class="product-card__content--subtitle">Digital single-lens reflex camera</h4>
+                        <p class="product-card__content--price">$180.00 <del>$180.00</del></p>
+                        <div class="product-card__content--button">
+                            <a class="button view" href="product.html"><button>View</button></a>
+                            <a  class="button order" href="#"><button>Order</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-    </section>
-
+        <div class="shop-pegination container pb-50">
+            <ul class="justify-content-center">
+                <li class="page-item">
+                    <a href="#"><i class="las la-angle-left"></i></a>
+                </li>
+                <li class="page-item"><a href="#">1</a></li>
+                <li class="page-item"><a href="#">2</a></li>
+                <li class="page-item"><a href="#">3</a></li>
+                <li class="page-item">
+                    <a href="#"><i class="las la-angle-right"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!--***************Footer****************-->
 
@@ -501,7 +534,6 @@
 
     </footer>
 
-
     <!--================= Link Script Here =================-->
     <!-- Vendor Script -->
     <script src="./assets/js/vendor/jquery-3.6.1.min.js"></script>
@@ -510,6 +542,4 @@
 
     <!-- Main Script -->
     <script src="./assets/js/script.js"></script>
-
-
 </body>

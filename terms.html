@@ -67,7 +67,7 @@
                                 <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#">
+                                    <a class="nav-link dropdown-toggle active" href="#">
                                         Shop
                                     </a>
                                     <ul class="dropdown-menu">
@@ -108,7 +108,8 @@
                                         <li><a class="dropdown-item" href="#">Others <i
                                                     class="las la-angle-right"></i></a>
                                             <ul class="dropdown-menu nested-dropdown">
-                                                <li><a class="dropdown-item" href="terms.html">Terms & Conditions</a></li>
+                                                <li><a class="dropdown-item" href="terms.html">Terms & Conditions</a>
+                                                </li>
                                                 <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
                                                 <li><a class="dropdown-item" href="#">Coming Soon</a></li>
                                                 <li><a class="dropdown-item" href="#">Search Page</a></li>
@@ -160,16 +161,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="hero-info bg-gray">
-            <div class="container">
-                <div class="hero-info__content">
-                    <div class="hero-info__content--item d-none d-lg-block">Refer a Friend. Get 20% Off</div>
-                    <div class="hero-info__content--item d-none d-lg-block">Subscribe Today Get $10 Off</div>
-                    <div class="hero-info__content--item d-none d-lg-block">Free Shipping +30 Day Returns</div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- Search Offcanvas -->
@@ -209,191 +200,79 @@
         </div>
     </div>
 
-    <!--***************Checkout Section***************-->
+    <!-- Terms Of Services -->
 
-    <div class="billing-cupon container pt-50">
-        <button>Returning customer? Click here to login</button>
-        <button>Have A Cupon ? Click Here To Enter Your Code</button>
-    </div>
-
-    <section class="container">
-        <div class="billing-section">
-            <div class="billing-information">
-                <div class="billing-details pb-50">
-                    <h4 class="title">Billing Details</h4>
-                    <div class="input-group">
-                        <label>Name *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Bangladesh" />
-                        </div>
-                    </div>
-                    <div class="billing-details--email">
-                        <div class="billing-details--email---item">
-                            <div class="input-group">
-                                <label>Email *</label>
-                                <div class="custom-input__group">
-                                    <input class="custom-input__field" type="email" placeholder="Email" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="billing-details--email---item">
-                            <div class="input-group">
-                                <label>Phone *</label>
-                                <div class="custom-input__group">
-                                    <input class="custom-input__field" type="number" placeholder="Phone" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="billing-details--select">
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your City*</label>
-                                <select name="city" id="city">
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="dhaka">Dhaka</option>
-                                    <option value="rangpur">Rangpur</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your Zone*</label>
-                                <select name="city" id="city">
-                                    <option value="rangpur">Rangpur</option>
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="dhaka">Dhaka</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="billing-details--select---item">
-                            <div class="input-group">
-                                <label>Select Your Area*</label>
-                                <select name="city" id="city">
-                                    <option value="dhaka">Dhaka</option>
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="rangpur">Rangpur</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Address *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Street Address" />
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Postcode / Zip *</label>
-                        <div class="custom-input__group">
-                            <input class="custom-input__field" type="text" placeholder="Postcode / Zip" />
-                        </div>
-                    </div>
-                </div>
-                <div class="order-summery pb-50">
-                    <h4 class="title">Your Order</h4>
-
-                    <div class="order-list">
-                        <div class="order-list--item1 order-list--header">
-                            <h4 class="order-list--item---title">Product</h4>
-                            <p class="order-list--item---info">Total</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                        <div class="order-list--item1 order-list--body">
-                            <h4 class="order-list--item---title">Vestibulum suscipit × 1</h4>
-                            <p class="order-list--item---info">$165.00</p>
-                        </div>
-                    </div>
-                    <div class="order-select">
-                        <form>
-                            <p>
-                                <input type="radio" id="test1" name="radio-group" checked />
-                                <label for="test1">Flat Rate: $7.00</label>
-                            </p>
-                            <p>
-                                <input type="radio" id="test2" name="radio-group" />
-                                <label for="test2">Free Shipping</label>
-                            </p>
-                        </form>
-                    </div>
-                    <div class="order-total">
-                        <div class="order-list--item order-list--body">
-                            <h4 class="order-list--item---title">Sub Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
-                        <div class="order-list--item order-list--body">
-                            <h4 class="order-list--item---title">Grand Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
-                        <div class="order-list--item order-list--header">
-                            <h4 class="order-list--item---title">Total</h4>
-                            <p class="order-list--item---info">$215.00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shipping-information">
-                <div class="shipping-details pb-50">
-                    <h4 class="title">Shipping Details</h4>
-                    <div class="custom-input__checkbox">
-                        <input type="checkbox" id="shipping" />
-                        <label for="shipping">Ship to a different address?</label>
-                    </div>
-                    <h5>Order Notes</h5>
-                    <form>
-                        <textarea placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                    </form>
-                </div>
-
-                <div class="payment pb-50">
-                    <h4 class="title">Payment</h4>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment1" />
-                            <label for="payment1"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/cashondelivery.png" alt="cod" />
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment2" />
-                            <label for="payment2"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/bkash.png" alt="cod" />
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="payment-item">
-                        <div class="custom-input__checkbox">
-                            <input type="checkbox" id="payment3" />
-                            <label for="payment3"></label>
-                        </div>
-                        <div class="payment-item--picture">
-                            <figure>
-                                <img src="assets/img/paymentGateway.png" alt="cod" />
-                            </figure>
-                        </div>
-                    </div>
-                    <button>Place Order</button>
-                </div>
+    <div class="header-page" style="background-image:url(assets/img/Frame.png) ; background-size: cover;">
+        <div class="header-page--title">
+            <h3>Terms Of Service</h3>
+            <div class="header-page--item">
+                <a href="index.html">Home</a>
+                <p> / Terms</p>
             </div>
         </div>
-
+    </div>
+    <section class="privacy-section pt-50 pb-50">
+        <div class="container">
+            <div class="terms-privacy">
+                <div class="sub-section--title">
+                    <h3>Our Terms & Conditions</h3>
+                </div>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <div class="sub-section--title">
+                    <h3>Changes To The Terms</h3>
+                </div>
+                <div class="terms-privacy--list">
+                    <li>
+                        <p>
+                            <strong>01.</strong>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, tempora laboriosam porro fugit
+                            debitis, dolorem natus assumenda facilis in ut reiciendis laborum sapiente minima libero
+                            quas praesentium ex rerum eos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates nulla porro commodi.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>02.</strong>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, tempora laboriosam porro fugit
+                            debitis, dolorem natus assumenda facilis in ut reiciendis laborum sapiente minima libero
+                            quas praesentium ex rerum eos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates nulla porro commodi.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>03.</strong>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, tempora laboriosam porro fugit
+                            debitis, dolorem natus assumenda facilis in ut reiciendis laborum sapiente minima libero
+                            quas praesentium ex rerum eos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates nulla porro commodi.
+                        </p>
+                    </li>
+                </div>
+                <div class="sub-section--title">
+                    <h3>Additional Terms</h3>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, tempora laboriosam porro fugit debitis,
+                    dolorem natus assumenda facilis in ut reiciendis laborum sapiente minima libero quas praesentium ex
+                    rerum eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nulla porro commodi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, tempora laboriosam porro fugit debitis,
+                    dolorem natus assumenda facilis in ut reiciendis laborum sapiente minima libero quas praesentium ex
+                    rerum eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nulla porro commodi.
+                </p>
+            </div>
+        </div>
     </section>
-
 
     <!--***************Footer****************-->
 
@@ -501,7 +380,6 @@
 
     </footer>
 
-
     <!--================= Link Script Here =================-->
     <!-- Vendor Script -->
     <script src="./assets/js/vendor/jquery-3.6.1.min.js"></script>
@@ -510,6 +388,4 @@
 
     <!-- Main Script -->
     <script src="./assets/js/script.js"></script>
-
-
 </body>

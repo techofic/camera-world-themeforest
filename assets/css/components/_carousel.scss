@@ -43,10 +43,6 @@
     }
 }
 
-// .owl-theme .owl-nav.disabled+.owl-dots {
-//     margin-top: 0;
-// }
-
 // Responsive
 @include breakpoint-max(1199px) {
     .owl {
@@ -144,51 +140,3 @@
         }
     }
 }
-
-//new-product
-// .new-product__section{
-//     @include breakpoint-min(1100px) {
-//         .owl {
-//             &-theme {
-//                 .owl-nav {
-//                     .owl {
-//                         &-prev {
-//                             left: -23px;
-//                             top: 121px;
-//                         }
-//                         &-next {
-//                             right: -23px;
-//                             top: 121px;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-    
-
-// }
-//new-product
-// .featured-product__section{
-//     @include breakpoint-min(1100px) {
-//         .owl {
-//             &-theme {
-//                 .owl-nav {
-//                     .owl {
-//                         &-prev {
-//                             left: -23px;
-//                             top: 121px;
-//                         }
-//                         &-next {
-//                             right: -23px;
-//                             top: 121px;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-    
-
-// }
-
